@@ -8,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
-
+  showCart = false;
   ngOnInit() {
+  }
+
+  toggleCart() {
+    this.showCart = !this.showCart;
   }
 
 }

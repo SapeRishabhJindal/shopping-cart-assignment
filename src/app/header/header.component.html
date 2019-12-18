@@ -19,13 +19,16 @@
                     </ul>
                 </div>
                 <div class="cart-btn">
-                    <a href="" class="btn-grey">
+                    <button href="" class="btn-grey" (click)="toggleCart()">
                         <img src="../../assets/static/images/cart.svg" class="cart-img">
                         <span>0 items</span>
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 </header>
 <!-- Header Ends -->
+<section *ngIf="showCart">
+    <app-cart (closeCart)="toggleCart()"></app-cart>
+</section>

@@ -89,3 +89,11 @@ input:focus {
 label {
     font-size: 80%;
 }
+
+.fl-left {
+    float: left;
+}
+
+.fl-right {
+    float: right;
+}
