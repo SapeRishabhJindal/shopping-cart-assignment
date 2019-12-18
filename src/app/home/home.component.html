@@ -1,0 +1,25 @@
+<section>
+    <div *ngFor="let item of categories;index as i">
+        <div class="row box-shadow flex-container category-container" *ngIf="i%2 === 0">
+            <div class="width-30">
+                <img src="{{item.imageUrl}}" alt="{{item.key}}" class="category-img">
+            </div>
+            <div class="width-70">
+                <h2>{{item.name}}</h2>
+                <p>{{item.description}}</p>
+                <button class="btn-main" [routerLink]="['/products',item.id]">Explore {{item.key}}</button>
+            </div>
+        </div>
+
+        <div class="row box-shadow flex-container category-container " *ngIf="i%2 !== 0">
+            <div class="width-70">
+                <h2>{{item.name}}</h2>
+                <p>{{item.description}}</p>
+                <button class="btn-main" [routerLink]="['/products',item.id]">Explore {{item.key}}</button>
+            </div>
+            <div class="width-30">
+                <img src="{{item.imageUrl}}" alt="{{item.key}}" class="category-img">
+            </div>
+        </div>
+    </div>
+</section>

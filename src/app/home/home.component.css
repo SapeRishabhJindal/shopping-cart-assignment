@@ -1,0 +1,35 @@
+.box-shadow {
+    box-shadow: 0 8px 8px rgb(219, 219, 219);
+}
+
+.width-30 {
+    width: 30%;
+}
+
+.width-70 {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.width-70 p {
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    font-size: 80%
+}
+
+.width-70 .btn-main {
+    width: 25%;
+}
+
+.category-img {
+    height: 200px;
+    width: 300px;
+    margin: 0 10px;
+}
+
+.category-container {
+    padding: 40px 0;
+}

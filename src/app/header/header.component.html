@@ -1,0 +1,31 @@
+<!-- Header Starts -->
+<header>
+    <div class="row">
+        <div>
+            <div class="nav-top">
+                <span><a routerLink="/signin" routerLinkActive="active">SignIn</a></span>
+                <span><a routerLink="/register" routerLinkActive="active">Register</a></span>
+            </div>
+            <div class="flex-container">
+                <div>
+                    <img src="../../assets/static/images/logo.png" alt="Sabka Bazar Logo">
+                </div>
+                <div class="main-nav">
+                    <ul>
+                        <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+                        <li>
+                            <a [routerLink]="['/products','']" routerLinkActive="active">Products</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cart-btn">
+                    <a href="" class="btn-grey">
+                        <img src="../../assets/static/images/cart.svg" class="cart-img">
+                        <span>0 items</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header Ends -->
