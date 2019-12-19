@@ -7,6 +7,7 @@ header {
     font-size: 80%;
     margin-top: 5px;
     margin-bottom: 5px;
+    padding-right: 5px;
 }
 
 .nav-top span {
@@ -36,19 +37,21 @@ header {
     color: #555;
 }
 
-.cart-btn {
-    display: flex;
-    flex-direction: row-reverse;
+.logo {
+    height: 75px;
 }
 
 .btn-grey {
     background-color: rgb(238, 238, 238);
-    padding: 35px 40px;
+    padding: 25px 40px;
     display: flex;
     border: 0;
+    position: relative;
+    top: 10px;
 }
 
 .cart-img {
     height: 20px;
     width: auto;
+    color: rgb(209, 1, 87);
 }

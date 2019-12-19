@@ -88,3 +88,28 @@
     padding: 8px;
     font-size: 80%;
 }
+
+.checkout-container {
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 400px;
+}
+
+.checkout-container p {
+    font-size: 70%;
+    text-align: center;
+    padding: 10px;
+}
+
+.checkout-container .btn-main {
+    height: 50px;
+    width: 370px;
+    margin: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.checkout-container .btn-main span {
+    padding: 5px 20px;
+}
