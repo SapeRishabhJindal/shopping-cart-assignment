@@ -1,6 +1,31 @@
 <!-- Header Starts -->
 <header>
-    <div class="row">
+    <div class="container">
+        <div class="row d-none d-md-block">
+            <div class="col-sm-12 col-md-12 col-lg-12 ">
+                <span class="float-right"><a routerLink="/signin" routerLinkActive="active">SignIn</a></span>
+                <span class="float-right"><a routerLink="/register" routerLinkActive="active">Register</a></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col p-0">
+                <img class="float-left" src="../../assets/static/images/logo.png" alt="Sabka Bazar Logo">
+            </div>
+            <div class="d-none d-md-block col-sm-6 col-md-8 float-left p-0">
+                <ul>
+                    <li> <a routerLink="/home" routerLinkActive="active">Home</a> </li>
+                    <li> <a [routerLink]="['/products','']" routerLinkActive="active">Products</a> </li>
+                </ul>
+            </div>
+            <div class="col p-0 ">
+                <button href="" class="btn-grey float-right" (click)="toggleCart()">
+                    <img src="../../assets/static/images/cart.svg" class="cart-img">
+                    <span>0 items</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="row">
         <div>
             <div class="nav-top">
                 <span><a routerLink="/signin" routerLinkActive="active">SignIn</a></span>
@@ -26,7 +51,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </header>
 <!-- Header Ends -->
 <section *ngIf="showCart">

@@ -46,8 +46,8 @@ header {
     padding: 25px 40px;
     display: flex;
     border: 0;
-    position: relative;
-    top: 10px;
+    /* position: relative;
+    top: 10px; */
 }
 
 .cart-img {
