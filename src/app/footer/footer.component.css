@@ -3,3 +3,8 @@ footer {
     padding: 10px 0;
     font-size: 80%;
 }
+
+p {
+    font-size: 80%;
+    margin-bottom: 0;
+}

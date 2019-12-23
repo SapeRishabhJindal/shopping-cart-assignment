@@ -2,6 +2,23 @@
     box-shadow: 0 8px 8px rgb(219, 219, 219);
 }
 
+.category-img {
+    height: 95px;
+    width: 95px;
+}
+
+h2 {
+    font-size: 130%;
+}
+
+p {
+    font-size: 70%;
+}
+
+/* .category-container {
+    padding: 40px 0;
+}
+
 .width-30 {
     width: 30%;
 }
@@ -22,14 +39,4 @@
 
 .width-70 .btn-main {
     width: 25%;
-}
-
-.category-img {
-    height: 200px;
-    width: 300px;
-    margin: 0 10px;
-}
-
-.category-container {
-    padding: 40px 0;
-}
+} */

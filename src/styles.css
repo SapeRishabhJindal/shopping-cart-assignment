@@ -23,24 +23,25 @@ h2 {
     display: flex;
 }
 
-.row {
+/* .row {
     max-width: 1140px;
     margin: 0 auto;
     padding: 0;
-}
+} */
 
 section {
     padding: 30px 0;
 }
 
 .btn-main {
-    width: 100%;
+    width: 60%;
     background-color: rgb(209, 1, 87);
-    padding: 10px 0;
+    padding: 5px 0;
     border: 0;
     border-radius: 2px;
     color: white;
     cursor: pointer;
+    font-size: 75%;
 }
 
 .btn-main:hover {
