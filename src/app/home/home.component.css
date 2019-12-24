@@ -3,8 +3,8 @@
 }
 
 .category-img {
-    height: 95px;
-    width: 95px;
+    height: 80px;
+    width: 80px;
 }
 
 h2 {
@@ -12,7 +12,28 @@ h2 {
 }
 
 p {
-    font-size: 70%;
+    font-size: 65%;
+    padding: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+    .category-img {
+        height: 120px;
+        width: 150px;
+    }
+    h2 {
+        font-size: 150%;
+    }
+    p {
+        font-size: 100%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .category-img {
+        height: 150px;
+        width: 220px;
+    }
 }
 
 /* .category-container {

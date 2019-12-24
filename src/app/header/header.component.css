@@ -19,6 +19,25 @@ header {
     color: rgb(209, 1, 87);
 }
 
+.menu-list {
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+@media only screen and (min-width: 768px) {
+    .logo {
+        height: 75px;
+    }
+    .btn-grey {
+        padding: 20px 20px;
+        width: 125px;
+    }
+    .category-img {
+        height: 120px;
+        width: 150px;
+    }
+}
+
 /* .nav-top {
     text-align: right;
     font-size: 80%;

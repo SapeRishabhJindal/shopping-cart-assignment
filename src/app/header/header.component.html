@@ -1,24 +1,28 @@
 <!-- Header Starts -->
 <header>
-    <div class="container">
-        <div class="row d-none d-md-block">
-            <div class="col-sm-12 col-md-12 col-lg-12 ">
-                <span class="float-right"><a routerLink="/signin" routerLinkActive="active">SignIn</a></span>
-                <span class="float-right"><a routerLink="/register" routerLinkActive="active">Register</a></span>
+    <div class="container-xl">
+        <div class="row d-none d-sm-block d-md-block d-lg-block">
+            <div class="col text-right p-0">
+                <span class="mr-2"><a routerLink="/signin" routerLinkActive="active">SignIn</a></span>
+                <span><a routerLink="/register" routerLinkActive="active">Register</a></span>
             </div>
         </div>
         <div class="row">
-            <div class="col p-0">
-                <img class="float-left logo" src="../../assets/static/images/logo.png" alt="Sabka Bazar Logo">
+            <div class="col p-0 col-sm-5 col-md-3 col-lg-2">
+                <a routerLink="/home" routerLinkActive="active"> <img class="float-left logo pb-sm-2"
+                        src="../../assets/static/images/logo.png" alt="Sabka Bazar Logo">
+                </a>
             </div>
-            <div class="d-none d-md-block col-sm-6 col-md-8 float-left p-0">
-                <ul>
-                    <li> <a routerLink="/home" routerLinkActive="active">Home</a> </li>
-                    <li> <a [routerLink]="['/products','']" routerLinkActive="active">Products</a> </li>
+            <div class="d-none d-sm-block d-md-block d-lg-block col-sm-4 col-md-7 col-lg-8 ">
+                <ul class="menu-list">
+                    <li class="d-inline mr-3"> <a routerLink="/home" routerLinkActive="active">Home</a>
+                    </li>
+                    <li class="d-inline"> <a [routerLink]="['/products','']" routerLinkActive="active">Products</a>
+                    </li>
                 </ul>
             </div>
-            <div class="col  p-0 ">
-                <button href="" class="btn-grey float-right" (click)="toggleCart()">
+            <div class="col p-0 col-sm-3 col-md-2 col-lg-2 align-self-end">
+                <button class="btn-grey float-right " (click)="toggleCart()">
                     <img src="../../assets/static/images/cart.svg" class="cart-img">
                     <span>0 items</span>
                 </button>

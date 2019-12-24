@@ -1,4 +1,72 @@
-<div class="row flex-container ">
+<div class="container-xl">
+    <div class="row p-0">
+        <div class="col-md-3 col-sm-3 col-lg-2 p-0">
+            <div class="side-nav d-none d-sm-block">
+                <ul>
+                    <li *ngFor="let cat of category" (click)="filterProducts(cat.id)">{{cat.name}}</li>
+                </ul>
+            </div>
+            <select class="d-block d-sm-none d-md-none d-lg-none">
+                <option *ngFor="let cat of category">{{cat.name}}</option>
+            </select>
+        </div>
+        <div class="col-md-9 col-sm-9 col-lg-10 mt-2">
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3" *ngFor="let product of products;index as i">
+                    <div class="row p-0">
+                        <div class="col">
+                            <h3>{{product.name}}</h3>
+                        </div>
+                    </div>
+                    <div class="row p-0 d-xl-none">
+                        <div class="col col-sm-5 col-md-5 col-align-self-center text-center p-0">
+                            <img class="product-img" src="{{product.imageURL}}">
+                        </div>
+                        <div class="col col-sm-7 col-md-7">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="product-description">{{product.description}}</p>
+                                </div>
+                            </div>
+                            <div class="row d-block d-sm-none d-md-none d-lg-none">
+                                <div class="col">
+                                    <button class="btn-main btn-buy-now">Buy Now @ Rs. {{product.price}} </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row p-0 d-none d-xl-block">
+                        <div class="col col-align-self-center text-center p-0">
+                            <img class="product-img" src="{{product.imageURL}}">
+                        </div>
+                    </div>
+                    <div class="row p-0 d-none d-xl-block">
+                        <div class="col-xl-12">
+                            <p class="product-description">{{product.description}}</p>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-6 col-xl-6 d-none d-xl-block align-self-center">
+                            <p> MRP Rs. {{product.price}}</p>
+                        </div>
+                        <div class="col-6 col-xl-6 d-none d-xl-block ">
+                            <button class="btn-main btn-buy-now">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="row d-none d-sm-block d-md-block d-lg-block d-xl-none">
+                        <div class="col">
+                            <button class="btn-main btn-buy-now">Buy Now @ Rs. {{product.price}} </button>
+                        </div>
+                    </div>
+                    <hr size="20">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="row flex-container ">
     <div class="side-nav">
         <ul>
             <li *ngFor="let cat of category" (click)="filterProducts(cat.id)">{{cat.name}}</li>
@@ -19,4 +87,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

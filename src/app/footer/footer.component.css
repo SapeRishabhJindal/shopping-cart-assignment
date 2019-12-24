@@ -1,10 +1,25 @@
 footer {
     background-color: rgb(238, 238, 238);
     padding: 10px 0;
-    font-size: 80%;
 }
 
 p {
-    font-size: 80%;
+    font-size: 55%;
     margin-bottom: 0;
+}
+
+/* iPad and medium screens*/
+
+@media only screen and (min-width: 768px) {
+    p {
+        font-size: 80%;
+    }
+}
+
+/* iPad and large screens*/
+
+@media only screen and (min-width: 992px) {
+    p {
+        font-size: 100%;
+    }
 }
