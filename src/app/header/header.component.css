@@ -24,6 +24,10 @@ header {
     margin-bottom: 0px;
 }
 
+.signin-register {
+    font-size: 90%;
+}
+
 @media only screen and (min-width: 768px) {
     .logo {
         height: 75px;
