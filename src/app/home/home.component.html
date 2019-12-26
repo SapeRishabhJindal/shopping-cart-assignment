@@ -1,5 +1,27 @@
 <section>
     <div class="container-xl">
+        <div class="slideshow-container">
+            <div class="mySlides fade" *ngFor="let banner of banners;index as i">
+                <img src="{{banner.bannerImageUrl}}" style="width:100%">
+            </div>
+
+            <!-- <div class="mySlides fade">
+                <img src="../../assets/static/images/offers/offer2.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="../../assets/static/images/offers/offer3.jpg" style="width:100%">
+            </div> -->
+            <a class="prev" (click)="plusSlides(-1)">prev</a>
+            <a class="next" (click)="plusSlides(1)">next</a>
+        </div>
+        <div style="text-align:center">
+            <span class="dot" (click)="currentSlide(i+1)" *ngFor="let banner of banners;index as i"></span>
+            <!-- <span class="dot" (click)="currentSlide(2)"></span>
+            <span class="dot" (click)="currentSlide(3)"></span> -->
+        </div>
+
+
         <div *ngFor="let item of categories;index as i">
             <div class="row box-shadow px-0 py-2" *ngIf="i%2 === 0">
                 <div class="align-self-center text-center w-25 ">

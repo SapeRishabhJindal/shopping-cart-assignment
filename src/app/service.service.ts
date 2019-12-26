@@ -15,4 +15,8 @@ export class ServiceService {
   getProducts() {
     return this.http.get('http://localhost:5000/products')
   }
+
+  getBanners() {
+    return this.http.get('http://localhost:5000/banners')
+  }
 }
