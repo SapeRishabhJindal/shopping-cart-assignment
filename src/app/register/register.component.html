@@ -7,28 +7,57 @@
             </div>
             <div class="col-6">
                 <div class="group">
-                    <input type="text" required="required" /><span class="highlight"></span><span class="bar"></span>
+                    <input type="text" required="required" [formControl]="firstName" /><span
+                        class="highlight"></span><span class="bar"></span>
                     <label>First Name</label>
+                    <div *ngIf="submitted">
+                        <div *ngIf="firstName.errors?.required" class="form-error">First Name is required</div>
+                    </div>
                 </div>
                 <div class="group">
-                    <input type="text" required="required" /><span class="highlight"></span><span class="bar"></span>
+                    <input type="text" required="required" [formControl]="lastName" /><span
+                        class="highlight"></span><span class="bar"></span>
                     <label>Last Name</label>
+                    <div *ngIf="submitted">
+                        <div *ngIf="lastName.errors?.required" class="form-error">Last Name is required</div>
+                    </div>
                 </div>
                 <div class="group">
-                    <input type="text" required="required" /><span class="highlight"></span><span class="bar"></span>
+                    <input type="text" required="required" [formControl]="email" /><span class="highlight"></span><span
+                        class="bar"></span>
                     <label>Email</label>
+                    <div *ngIf="submitted">
+                        <div *ngIf="email.errors?.required" class="form-error">Email is required</div>
+                        <div *ngIf="email.errors?.email" class="form-error">Email must be a valid email address</div>
+                    </div>
                 </div>
                 <div class="group">
-                    <input type="password" required="required" /><span class="highlight"></span><span
-                        class="bar"></span>
+                    <input type="password" required="required" [formControl]="password" /><span
+                        class="highlight"></span><span class="bar"></span>
                     <label>Password</label>
+                    <div *ngIf="submitted">
+                        <div *ngIf="password.errors?.required" class="form-error">Password is required
+                        </div>
+                        <div *ngIf="password.errors?.minlength" class="form-error">Password must
+                            contain 6 characters</div>
+                        <div *ngIf="password.errors?.pattern" class="form-error">Password must have a
+                            number and alphabet</div>
+                    </div>
                 </div>
                 <div class="group">
-                    <input type="password" required="required" /><span class="highlight"></span><span
-                        class="bar"></span>
+                    <input type="password" required="required" [formControl]="confirmPassword" /><span
+                        class="highlight"></span><span class="bar"></span>
                     <label>Confirm Password</label>
+                    <div *ngIf="submitted">
+                        <div *ngIf="confirmPassword.errors?.required" class="form-error">
+                            Password is required
+                        </div>
+                        <div *ngIf="misMatchPassword" class="form-error">
+                            Password and Confirm Password do not match.
+                        </div>
+                    </div>
                 </div>
-                <button class="btn-main">Signup</button>
+                <button class="btn-main" (click)="registerClicked()">Signup</button>
             </div>
         </div>
     </div>
