@@ -9,22 +9,25 @@
         </div>
         <div class="row">
             <div class="col p-0 col-sm-5 col-md-3 col-lg-2">
-                <a routerLink="/home" routerLinkActive="active"> <img class="float-left logo pb-sm-2"
-                        src="../../assets/static/images/logo.png" alt="Sabka Bazar Logo">
+                <a routerLink="/home" routerLinkActive="active">
+                    <img class="float-left logo pb-sm-2" src="../../assets/static/images/logo.png"
+                        alt="Sabka Bazar Logo" (click)="closeCart()">
                 </a>
             </div>
             <div class="d-none d-sm-block d-md-block d-lg-block col-sm-4 col-md-7 col-lg-8 ">
                 <ul class="menu-list">
-                    <li class="d-inline mr-3"> <a routerLink="/home" routerLinkActive="active">Home</a>
+                    <li class="d-inline mr-3" (click)="closeCart()"> <a routerLink="/home"
+                            routerLinkActive="active">Home</a>
                     </li>
-                    <li class="d-inline"> <a [routerLink]="['/products','']" routerLinkActive="active">Products</a>
+                    <li class="d-inline" (click)="closeCart()"> <a [routerLink]="['/products','']"
+                            routerLinkActive="active">Products</a>
                     </li>
                 </ul>
             </div>
             <div class="col p-0 col-sm-3 col-md-2 col-lg-2 align-self-end">
                 <button class="btn-grey float-right " (click)="toggleCart()">
                     <img src="../../assets/static/images/cart.svg" class="cart-img">
-                    <span>0 items</span>
+                    <span>{{cartItemCount}} items</span>
                 </button>
             </div>
         </div>

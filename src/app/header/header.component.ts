@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceService } from '../service.service';
 
 @Component({
   selector: 'app-header',
@@ -6,14 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  cartItemCount = 0;
+  constructor(private service: ServiceService) {
+    this.service.updateCart().subscribe(item => {
+      if (item) {
+        this.cartItemCount = item.item.length;
+      }
+    });
+  }
   showCart = false;
   ngOnInit() {
   }
 
   toggleCart() {
     this.showCart = !this.showCart;
+  }
+  closeCart() {
+    this.showCart = false;
   }
 
 }

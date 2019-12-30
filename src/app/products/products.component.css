@@ -49,6 +49,11 @@ hr {
     margin-bottom: 10px;
 }
 
+.side-nav-active {
+    font-weight: bold;
+    border-right: 2px solid black;
+}
+
 /* iPad and medium screens*/
 
 @media only screen and (min-width: 768px) {

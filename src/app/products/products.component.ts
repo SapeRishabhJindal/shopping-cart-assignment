@@ -13,6 +13,7 @@ export class ProductsComponent implements OnInit {
   originalProducts: any;
   products: any;
   category: any;
+  selectedID = null;
   ngOnInit() {
     this.service.getProducts().subscribe(data => {
       this.originalProducts = JSON.parse(JSON.stringify(data));
@@ -38,11 +39,21 @@ export class ProductsComponent implements OnInit {
 
   filterProducts(id) {
     this.products = [];
-    this.originalProducts.forEach(elem => {
-      if (id === elem.category) {
-        this.products.push(elem);
-      }
-    })
+    if (this.selectedID && this.selectedID === id) {
+      this.selectedID = null;
+      this.products = this.originalProducts;
+    } else {
+      this.selectedID = id;
+      this.originalProducts.forEach(elem => {
+        if (id === elem.category) {
+          this.products.push(elem);
+        }
+      });
+    }
+  }
+
+  AddToCart(item) {
+    this.service.addToCart(item);
   }
 
 }
