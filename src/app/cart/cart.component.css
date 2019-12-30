@@ -11,6 +11,10 @@
     overflow-y: hidden;
 }
 
+.fa {
+    cursor: pointer;
+}
+
 .shopping-cart {
     width: 100%;
     height: 90vh;

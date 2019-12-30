@@ -24,15 +24,13 @@ a {
     color: #555 !important;
 }
 
+a:hover {
+    text-decoration: none !important;
+}
+
 .flex-container {
     display: flex;
 }
-
-/* .row {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0;
-} */
 
 section {
     padding: 30px 0;
