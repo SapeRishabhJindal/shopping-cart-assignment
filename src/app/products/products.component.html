@@ -8,8 +8,8 @@
                         {{cat.name}}</li>
                 </ul>
             </div>
-            <select class="d-block d-sm-none d-md-none d-lg-none">
-                <option *ngFor="let cat of category">{{cat.name}}</option>
+            <select class="d-block d-sm-none d-md-none d-lg-none" (change)="filterProducts($event.target.value)">
+                <option *ngFor="let cat of category" value="{{cat.id}}">{{cat.name}}</option>
             </select>
         </div>
         <div class="col-md-9 col-sm-9 col-lg-10 mt-2">
