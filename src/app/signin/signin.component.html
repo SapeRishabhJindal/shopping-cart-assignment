@@ -1,34 +1,37 @@
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-6 text-center">
+            <div class="col-md-6 text-center">
                 <h3>Login</h3>
                 <p>Get access to your Orders, Wishlist and Recommendations</p>
             </div>
-            <div class="col-6">
-                <div class="group">
-                    <input type="text" required="required" [formControl]="email" required /><span
-                        class="highlight"></span><span class="bar"></span>
-                    <label>Email*</label>
-                    <div *ngIf="submitted">
-                        <div *ngIf="email.errors?.required" class="form-error">Email is required</div>
-                        <div *ngIf="email.errors?.email" class="form-error">Email must be a valid email address</div>
-                    </div>
-                </div>
-                <div class="group">
-                    <input type="password" required="required" [formControl]="password" required /><span
-                        class="highlight"></span><span class="bar"></span>
-                    <label>Password</label>
-                    <div *ngIf="submitted">
-                        <div *ngIf="password.dirty && password.errors?.required" class="form-error">Password is required
+            <div class="col-md-6">
+                <form method="POST" (ngSubmit)="loginClick()">
+                    <div class="group">
+                        <input type="text" required="required" [formControl]="email" required /><span
+                            class="highlight"></span><span class="bar"></span>
+                        <label>Email*</label>
+                        <div *ngIf="email.touched || submitted">
+                            <div *ngIf="email.errors?.required" class="form-error">Email is required</div>
+                            <div *ngIf="email.errors?.email" class="form-error">Email must be a valid email address
+                            </div>
                         </div>
-                        <div *ngIf="password.dirty && password.errors?.minlength" class="form-error">Password must
-                            contain 6 characters</div>
-                        <div *ngIf="password.dirty && password.errors?.pattern" class="form-error">Password must have a
-                            number and alphabet</div>
                     </div>
-                </div>
-                <button (click)="loginClick()" class="btn-main">Login</button>
+                    <div class="group">
+                        <input type="password" required="required" [formControl]="password" required /><span
+                            class="highlight"></span><span class="bar"></span>
+                        <label>Password</label>
+                        <div *ngIf="password.touched || submitted">
+                            <div *ngIf="password.errors?.required" class="form-error">Password is required
+                            </div>
+                            <div *ngIf="password.errors?.minlength" class="form-error">Password must
+                                contain 6 characters</div>
+                            <div *ngIf="password.errors?.pattern" class="form-error">Password must have a
+                                number and alphabet</div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-main">Login</button>
+                </form>
             </div>
         </div>
     </div>

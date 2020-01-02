@@ -25,7 +25,7 @@ export class ProductsComponent implements OnInit {
         element.imageURL = '../../assets' + element.imageURL;
       });
       this.route.params.subscribe(params => {
-        if (params['id'] === '') {
+        if (params['id'] === '' || params['id'] === undefined) {
           this.products = JSON.parse(JSON.stringify(this.originalProducts));
         } else {
           this.filterProducts(params['id']);

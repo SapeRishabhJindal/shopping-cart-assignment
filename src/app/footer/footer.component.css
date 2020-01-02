@@ -4,7 +4,7 @@ footer {
 }
 
 p {
-    font-size: 55%;
+    font-size: .55rem;
     margin-bottom: 0;
 }
 
@@ -12,7 +12,7 @@ p {
 
 @media only screen and (min-width: 768px) {
     p {
-        font-size: 80%;
+        font-size: .8rem;
     }
 }
 
@@ -20,6 +20,6 @@ p {
 
 @media only screen and (min-width: 992px) {
     p {
-        font-size: 100%;
+        font-size: 1rem;
     }
 }

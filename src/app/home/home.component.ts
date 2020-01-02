@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   categories: any;
   slideIndex = 1;
   banners: any;
+  timeOut: any;
   ngOnInit() {
     this.service.getCategories().subscribe(data => {
       this.categories = data;
@@ -33,10 +34,12 @@ export class HomeComponent implements OnInit {
   }
 
   plusSlides(n) {
+    clearTimeout(this.timeOut);
     this.showSlides(this.slideIndex += n);
   }
 
   currentSlide(n) {
+    clearTimeout(this.timeOut);
     this.showSlides(this.slideIndex = n);
   }
 
@@ -57,9 +60,8 @@ export class HomeComponent implements OnInit {
     }
     slides[this.slideIndex - 1]['style'].display = "block";
     dots[this.slideIndex - 1].className += " active";
-    setTimeout(() => {
+    this.timeOut = setTimeout(() => {
       this.showSlides(++this.slideIndex);
     }, 3000);
   }
-
 }

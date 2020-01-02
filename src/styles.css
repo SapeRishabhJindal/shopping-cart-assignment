@@ -11,7 +11,7 @@ html {
     color: #555;
     font-family: "Dosis", "Arial", sans-serif;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 16px;
     text-rendering: optimizeLegibility;
 }
 
@@ -59,7 +59,7 @@ section {
 input {
     background: none;
     color: #c6c6c6;
-    font-size: 18px;
+    font-size: 1rem;
     padding: 10px 10px 10px 5px;
     display: block;
     width: 320px;
@@ -88,7 +88,7 @@ input[type="password"] {
 
 label {
     color: #c6c6c6;
-    font-size: 16px;
+    font-size: .9rem;
     font-weight: normal;
     position: absolute;
     pointer-events: none;
@@ -124,7 +124,7 @@ label {
 @media only screen and (min-width: 768px) {
     .btn-main {
         width: 50%;
-        font-size: 100%;
+        font-size: 1rem;
     }
 }
 
@@ -133,7 +133,7 @@ label {
 @media only screen and (min-width: 992px) {
     .btn-main {
         width: 40%;
-        font-size: 100%;
+        font-size: 1rem;
     }
 }
 

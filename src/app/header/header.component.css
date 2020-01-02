@@ -8,7 +8,7 @@ header {
 
 .btn-grey {
     background-color: rgb(238, 238, 238);
-    padding: 12px 15px;
+    padding: 13px 15px;
     display: flex;
     border: 0;
 }
@@ -25,7 +25,7 @@ header {
 }
 
 .signin-register {
-    font-size: 90%;
+    font-size: .9rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -33,7 +33,7 @@ header {
         height: 75px;
     }
     .btn-grey {
-        padding: 20px 20px;
+        padding: 22px 20px;
         width: 125px;
     }
     .category-img {

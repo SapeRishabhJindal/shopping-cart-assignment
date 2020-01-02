@@ -1,5 +1,5 @@
 h3 {
-    font-size: 120%;
+    font-size: 1.2rem;
 }
 
 select {
@@ -14,12 +14,11 @@ select {
 .side-nav {
     padding: 0;
     height: 100vh;
-    /* width: 20%; */
     background-color: rgb(238, 238, 238);
 }
 
 .side-nav li {
-    font-size: 80%;
+    font-size: .8rem;
     list-style: none;
     padding: 10px 20px;
     margin-left: 10px;
@@ -39,8 +38,8 @@ hr {
 .product-description {
     background-color: rgb(238, 238, 238);
     padding: 5px;
-    font-size: 70%;
-    margin-bottom: 10px;
+    font-size: 0.7rem;
+    margin-bottom: 5px;
     /* height: 140px; */
 }
 
@@ -59,14 +58,14 @@ hr {
 @media only screen and (min-width: 768px) {
     h3 {
         height: 65px;
-        font-size: 110%;
+        font-size: 1.1rem;
     }
     .product-img {
         height: 160px;
         width: 135px;
     }
     .product-description {
-        font-size: 60%;
+        font-size: 0.6;
         margin-bottom: 5px;
         height: 200px;
     }
@@ -83,7 +82,7 @@ hr {
         width: 195px;
     }
     .product-description {
-        font-size: 75%;
+        font-size: 0.75rem;
         height: 192px;
     }
 }
@@ -91,22 +90,21 @@ hr {
 @media only screen and (min-width: 1200px) {
     h3 {
         height: 60px;
-        font-size: 100%;
+        font-size: 1rem;
     }
     .product-img {
         height: 195px;
         width: 195px;
     }
     .product-description {
-        font-size: 75%;
-        height: 200px;
+        height: 175px;
     }
     .btn-buy-now {
         width: 100%;
         margin-bottom: 10px;
     }
     p {
-        font-size: 90%;
+        font-size: 0.9rem;
     }
 }
 

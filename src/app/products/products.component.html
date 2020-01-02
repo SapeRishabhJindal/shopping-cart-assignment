@@ -5,7 +5,7 @@
                 <ul>
                     <li *ngFor="let cat of category" (click)="filterProducts(cat.id)"
                         [ngClass]="{'side-nav-active': cat.id===selectedID}">
-                        {{cat.name}}</li>
+                        <a href="javascript:void(0)">{{cat.name}}</a></li>
                 </ul>
             </div>
             <select class="d-block d-sm-none d-md-none d-lg-none" (change)="filterProducts($event.target.value)">
@@ -15,18 +15,16 @@
         <div class="col-md-9 col-sm-9 col-lg-10 mt-2">
             <div class="row">
                 <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3" *ngFor="let product of products;index as i">
-                    <div class="row p-0">
-                        <div class="col">
-                            <h3>{{product.name}}</h3>
-                        </div>
-                    </div>
+
+                    <h3>{{product.name}}</h3>
+
                     <div class="row p-0 d-xl-none">
                         <div class="col col-sm-5 col-md-5 col-align-self-center text-center p-0">
-                            <img class="product-img" src="{{product.imageURL}}">
+                            <img class="product-img" src="{{product.imageURL}}" alt="{{product.name}}">
                         </div>
                         <div class="col col-sm-7 col-md-7">
                             <div class="row">
-                                <div class="col">
+                                <div class="col pl-1">
                                     <p class="product-description">{{product.description}}</p>
                                 </div>
                             </div>

@@ -21,7 +21,7 @@ export class SigninComponent implements OnInit {
 
   loginClick() {
     this.submitted = true;
-    if (!(this.email.errors && this.password.errors)) {
+    if (!(this.email.errors || this.password.errors)) {
       this.router.navigate(['/home'])
     }
   }
