@@ -12,8 +12,10 @@
                             class="highlight"></span><span class="bar"></span>
                         <label>Email*</label>
                         <div *ngIf="email.touched || submitted">
-                            <div *ngIf="email.errors?.required" class="form-error">Email is required</div>
-                            <div *ngIf="email.errors?.email" class="form-error">Email must be a valid email address
+                            <div *ngIf="email.errors?.required" aria-describedby="Email is required"
+                                aria-live="assertive" class="form-error">Email is required</div>
+                            <div *ngIf="email.errors?.email" aria-describedby="Enter a valid email address"
+                                aria-live="assertive" class="form-error">Enter a valid email address
                             </div>
                         </div>
                     </div>
@@ -22,11 +24,14 @@
                             class="highlight"></span><span class="bar"></span>
                         <label>Password</label>
                         <div *ngIf="password.touched || submitted">
-                            <div *ngIf="password.errors?.required" class="form-error">Password is required
+                            <div *ngIf="password.errors?.required" aria-describedby="Password is required"
+                                aria-live="assertive" class="form-error">Password is required
                             </div>
-                            <div *ngIf="password.errors?.minlength" class="form-error">Password must
+                            <div *ngIf="password.errors?.minlength" aria-describedby="Password must
+                            contain 6 characters" aria-live="assertive" class="form-error">Password must
                                 contain 6 characters</div>
-                            <div *ngIf="password.errors?.pattern" class="form-error">Password must have a
+                            <div *ngIf="password.errors?.pattern" aria-describedby="Password must have a
+                            number and alphabet" aria-live="assertive" class="form-error">Password must have a
                                 number and alphabet</div>
                         </div>
                     </div>

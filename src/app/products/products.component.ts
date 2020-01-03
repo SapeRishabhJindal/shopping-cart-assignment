@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../service.service';
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -14,6 +14,7 @@ export class ProductsComponent implements OnInit {
   products: any;
   category: any;
   selectedID = null;
+  innerWidth: any;
   ngOnInit() {
     this.service.getProducts().subscribe(data => {
       this.originalProducts = JSON.parse(JSON.stringify(data));
@@ -35,6 +36,8 @@ export class ProductsComponent implements OnInit {
     this.service.getCategories().subscribe(data => {
       this.category = data;
     })
+    this.innerWidth = window.innerWidth;
+    console.log('this.innerWidth', this.innerWidth);
   }
 
   filterProducts(id) {
