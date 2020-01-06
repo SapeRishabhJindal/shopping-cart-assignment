@@ -8,6 +8,7 @@ import { ServiceService } from '../service.service';
 })
 export class HeaderComponent implements OnInit {
   cartItemCount = 0;
+  showMobileMenu = false;
   constructor(private service: ServiceService) {
     this.service.updateCart().subscribe(item => {
       if (item) {
@@ -21,9 +22,18 @@ export class HeaderComponent implements OnInit {
 
   toggleCart() {
     this.showCart = !this.showCart;
+    if (this.showCart) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = ''
+    }
   }
   closeCart() {
     this.showCart = false;
+    document.body.style.overflow = ''
+  }
+  toggleMobileMenu() {
+    this.showMobileMenu = !this.showMobileMenu;
   }
 
 }

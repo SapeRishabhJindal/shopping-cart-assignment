@@ -58,10 +58,12 @@ export class HomeComponent implements OnInit {
     for (let i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[this.slideIndex - 1]['style'].display = "block";
-    dots[this.slideIndex - 1].className += " active";
-    this.timeOut = setTimeout(() => {
-      this.showSlides(++this.slideIndex);
-    }, 3000);
+    if (slides.length !== 0) {
+      slides[this.slideIndex - 1]['style'].display = "block";
+      dots[this.slideIndex - 1].className += " active";
+      this.timeOut = setTimeout(() => {
+        this.showSlides(++this.slideIndex);
+      }, 3000);
+    }
   }
 }
