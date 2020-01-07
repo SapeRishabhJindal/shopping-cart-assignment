@@ -73,7 +73,7 @@ export class CartComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-
+    console.log('cart', window.innerWidth);
   }
 
   ngAfterViewInit() {

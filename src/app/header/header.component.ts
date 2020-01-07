@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { ServiceService } from '../service.service';
 
 @Component({
@@ -7,8 +7,14 @@ import { ServiceService } from '../service.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.checkScreenSize(event.target.innerWidth);
+  }
   cartItemCount = 0;
   showMobileMenu = false;
+  isSmallScreen = false;
+  isMediumLargeScreen = false;
   constructor(private service: ServiceService) {
     this.service.updateCart().subscribe(item => {
       if (item) {
@@ -18,6 +24,7 @@ export class HeaderComponent implements OnInit {
   }
   showCart = false;
   ngOnInit() {
+    this.checkScreenSize(window.innerWidth);
   }
 
   toggleCart() {
@@ -34,6 +41,26 @@ export class HeaderComponent implements OnInit {
   }
   toggleMobileMenu() {
     this.showMobileMenu = !this.showMobileMenu;
+    if (this.showCart) {
+      if (this.showMobileMenu) {
+        document.querySelector('.modal-custom')['style'].top = '155px';
+        document.querySelector('.shopping-cart')['style'].height = '78.5vh';
+      } else {
+        document.querySelector('.modal-custom')['style'].top = '54px';
+        document.querySelector('.shopping-cart')['style'].height = '90vh';
+      }
+    }
   }
 
+  checkScreenSize(innerWidth) {
+    if (innerWidth < 768) {
+      this.setScreenSize(true, false);
+    } else {
+      this.setScreenSize(false, true);
+    }
+  }
+  setScreenSize(small, mediumlarge) {
+    this.isSmallScreen = small;
+    this.isMediumLargeScreen = mediumlarge;
+  }
 }

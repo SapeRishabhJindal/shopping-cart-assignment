@@ -1,24 +1,25 @@
 <div class="container-xl">
     <div class="row p-0">
         <div class="col-md-3 col-sm-3 col-lg-2 p-0">
-            <div class="side-nav d-none d-sm-block">
+            <div class="side-nav d-none d-sm-block" *ngIf="!isSmallScreen">
                 <ul>
                     <li *ngFor="let cat of category" (click)="filterProducts(cat.id)"
                         [ngClass]="{'side-nav-active': cat.id===selectedID}">
                         <a href="javascript:void(0)">{{cat.name}}</a></li>
                 </ul>
             </div>
-            <select class="d-block d-sm-none d-md-none d-lg-none" (change)="filterProducts($event.target.value)">
+            <select class="d-block d-sm-none d-md-none d-lg-none" *ngIf="isSmallScreen"
+                (change)="filterProducts($event.target.value)">
                 <option *ngFor="let cat of category" value="{{cat.id}}">{{cat.name}}</option>
             </select>
         </div>
         <div class="col-md-9 col-sm-9 col-lg-10 mt-2">
             <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3" *ngFor="let product of products;index as i">
+                <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3" *ngFor="let product of products;index as i">
 
                     <h3>{{product.name}}</h3>
 
-                    <div class="row p-0 d-xl-none">
+                    <div class="row p-0 d-lg-none" *ngIf="isSmallScreen || isMediumScreen">
                         <div class="col col-sm-5 col-md-5 col-align-self-center text-center p-0">
                             <img class="product-img" src="{{product.imageURL}}" alt="{{product.name}}">
                         </div>
@@ -36,25 +37,26 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row p-0 d-none d-xl-block">
+                    <div class="row p-0 d-none d-lg-block" *ngIf="!isSmallScreen">
                         <div class="col col-align-self-center text-center p-0">
                             <img class="product-img" src="{{product.imageURL}}">
                         </div>
                     </div>
-                    <div class="row p-0 d-none d-xl-block">
+                    <div class="row p-0 d-none d-lg-block" *ngIf="!isSmallScreen">
                         <div class="col-xl-12">
                             <p class="product-description">{{product.description}}</p>
                         </div>
                     </div>
                     <div class="row ">
-                        <div class="col-6 col-xl-6 d-none d-xl-block align-self-center">
+                        <div class="col-6 col-xl-6 d-none d-lg-block align-self-center" *ngIf="!isSmallScreen">
                             <p> MRP Rs. {{product.price}}</p>
                         </div>
-                        <div class="col-6 col-xl-6 d-none d-xl-block ">
+                        <div class="col-6 col-xl-6 d-none d-lg-block " *ngIf="!isSmallScreen">
                             <button class="btn-main btn-buy-now" (click)="AddToCart(product)">Buy Now</button>
                         </div>
                     </div>
-                    <div class="row d-none d-sm-block d-md-block d-lg-block d-xl-none">
+                    <div class="row d-none d-sm-block d-md-block d-lg-none d-xl-none"
+                        *ngIf="isSmallScreen || isMediumScreen">
                         <div class="col">
                             <button class="btn-main btn-buy-now" (click)="AddToCart(product)">Buy Now @ Rs.
                                 {{product.price}} </button>

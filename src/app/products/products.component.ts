@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { ServiceService } from '../service.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -9,12 +9,19 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductsComponent implements OnInit {
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.checkScreenSize(event.target.innerWidth);
+  }
+
   constructor(private service: ServiceService, private route: ActivatedRoute) { }
   originalProducts: any;
   products: any;
   category: any;
   selectedID = null;
-  innerWidth: any;
+  isSmallScreen = true;
+  isMediumScreen = false;
+  isLargeScreen = false;
   ngOnInit() {
     this.service.getProducts().subscribe(data => {
       this.originalProducts = JSON.parse(JSON.stringify(data));
@@ -36,8 +43,7 @@ export class ProductsComponent implements OnInit {
     this.service.getCategories().subscribe(data => {
       this.category = data;
     })
-    this.innerWidth = window.innerWidth;
-    console.log('this.innerWidth', this.innerWidth);
+    this.checkScreenSize(window.innerWidth);
   }
 
   filterProducts(id) {
@@ -59,4 +65,18 @@ export class ProductsComponent implements OnInit {
     this.service.addToCart(item);
   }
 
+  checkScreenSize(innerWidth) {
+    if (innerWidth < 768) {
+      this.setScreenSize(true, false, false);
+    } else if (innerWidth < 992) {
+      this.setScreenSize(false, true, false);
+    } else {
+      this.setScreenSize(false, false, true);
+    }
+  }
+  setScreenSize(small, medium, large) {
+    this.isSmallScreen = small;
+    this.isMediumScreen = medium;
+    this.isLargeScreen = large;
+  }
 }
