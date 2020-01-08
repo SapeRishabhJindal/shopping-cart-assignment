@@ -30,7 +30,6 @@ export class CartComponent implements OnInit, AfterViewInit {
         this.closeCartClicked();
       }
     } else {
-      console.log(event);
       if (event.keyCode === 9) {
         if (event.target['classList'][1] === 'fa-plus' && Number(event.target['id'][7]) === (this.cartItem.length - 1)) {
           event.preventDefault();
@@ -73,7 +72,6 @@ export class CartComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    console.log('cart', window.innerWidth);
   }
 
   ngAfterViewInit() {
