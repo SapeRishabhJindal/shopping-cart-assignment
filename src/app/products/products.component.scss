@@ -24,7 +24,7 @@ select {
     list-style: none;
     padding: 10px 20px;
     margin-left: 10px;
-    border-bottom: 1px solid rgb(199, 199, 199);
+    border-bottom: 1px solid $side-nav-li-border;
     cursor: pointer;
 }
 
@@ -52,7 +52,7 @@ hr {
 
 .side-nav-active {
     font-weight: bold;
-    border-right: 2px solid black;
+    border-right: 2px solid $font-color-black;
 }
 
 /* iPad and medium screens*/

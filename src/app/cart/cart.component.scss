@@ -45,7 +45,7 @@
 }
 
 .title {
-    background-color: $background-color-main;
+    background-color: $background-color-white;
     align-items: flex-start;
 }
 
@@ -76,7 +76,7 @@
 .content-container {
     display: flex;
     flex-direction: row;
-    background-color: $background-color-main;
+    background-color: $background-color-white;
     margin-top: 12px;
 }
 
@@ -117,7 +117,7 @@
 }
 
 .checkout-container {
-    background-color: $background-color-main;
+    background-color: $background-color-white;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -146,7 +146,7 @@
 .cart-message {
     display: flex;
     align-items: center;
-    background-color: $background-color-main;
+    background-color: $background-color-white;
     width: 95%;
     align-self: center;
     border-radius: 5px;
@@ -206,7 +206,7 @@
 @media only screen and (min-width: $large-Screen-Size) {
     .modal-custom {
         top: 0;
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color:$background-modal-large-screen;
     }
     .shopping-cart {
         width: 400px;
