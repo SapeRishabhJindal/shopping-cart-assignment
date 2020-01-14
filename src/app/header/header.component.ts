@@ -4,7 +4,7 @@ import { ServiceService } from '../service.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
@@ -44,7 +44,7 @@ export class HeaderComponent implements OnInit {
     if (this.showCart) {
       if (this.showMobileMenu) {
         document.querySelector('.modal-custom')['style'].top = '155px';
-        document.querySelector('.shopping-cart')['style'].height = '78.5vh';
+        document.querySelector('.shopping-cart')['style'].height = '76.5vh';
       } else {
         document.querySelector('.modal-custom')['style'].top = '54px';
         document.querySelector('.shopping-cart')['style'].height = '90vh';

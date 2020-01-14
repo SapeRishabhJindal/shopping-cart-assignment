@@ -38,10 +38,11 @@
         </nav>
         <div *ngIf="showMobileMenu" class="d-block d-sm-none d-md-none d-lg-none">
             <ul class="mobile-menu-list" (click)="toggleMobileMenu()">
-                <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-                <li><a [routerLink]="['/products','']" routerLinkActive="active">Products</a></li>
-                <li><a routerLink="/signin" routerLinkActive="active">SignIn</a></li>
-                <li><a routerLink="/register" class="mr-1" routerLinkActive="active">Register</a></li>
+                <li (click)="closeCart()"><a routerLink="/home" routerLinkActive="active">Home</a></li>
+                <li (click)="closeCart()"><a [routerLink]="['/products','']" routerLinkActive="active">Products</a></li>
+                <li (click)="closeCart()"><a routerLink="/signin" routerLinkActive="active">SignIn</a></li>
+                <li (click)="closeCart()"><a routerLink="/register" class="mr-1" routerLinkActive="active">Register</a>
+                </li>
             </ul>
         </div>
     </div>

@@ -1,11 +1,13 @@
+@import '../../constants.scss';
+
 h3 {
     font-size: 1.2rem;
 }
 
 select {
     width: 100%;
-    background-color: rgb(209, 1, 87);
-    color: #fff;
+    background-color: $button-main;
+    color: $font-color-white;
     padding: 10px;
     margin-bottom: 10px;
     ;
@@ -14,7 +16,7 @@ select {
 .side-nav {
     padding: 0;
     height: 100vh;
-    background-color: rgb(238, 238, 238);
+    background-color: $main-background;
 }
 
 .side-nav li {
@@ -36,7 +38,7 @@ hr {
 }
 
 .product-description {
-    background-color: rgb(238, 238, 238);
+    background-color: $main-background;
     padding: 5px;
     font-size: 0.7rem;
     margin-bottom: 5px;
@@ -55,7 +57,7 @@ hr {
 
 /* iPad and medium screens*/
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: $medium-Screen-Size) {
     h3 {
         height: 65px;
         font-size: 1.1rem;
@@ -73,7 +75,7 @@ hr {
 
 /* iPad and large screens*/
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: $large-Screen-Size) {
     h3 {
         height: 75px;
     }
@@ -131,7 +133,7 @@ hr {
 }
 
 .product-description {
-    background-color: rgb(238, 238, 238);
+    background-color: $main-background;
     font-size: 80%;
     margin-bottom: 10px;
 }

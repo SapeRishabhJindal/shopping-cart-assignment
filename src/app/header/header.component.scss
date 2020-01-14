@@ -1,5 +1,7 @@
+@import '../../constants.scss';
+
 header {
-    box-shadow: 0 5px 5px rgb(231, 231, 231);
+    box-shadow: 0 5px 5px $box-shadow-color;
 }
 
 .logo {
@@ -7,7 +9,7 @@ header {
 }
 
 .btn-grey {
-    background-color: rgb(238, 238, 238);
+    background-color: $main-background;
     padding: 13px 15px;
     display: flex;
     border: 0;
@@ -16,7 +18,6 @@ header {
 .cart-img {
     height: 20px;
     width: auto;
-    color: rgb(209, 1, 87);
 }
 
 .menu-list {
@@ -59,7 +60,7 @@ header {
     border-right: 1px solid rgba(0,0,0,0);
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: $medium-Screen-Size) {
     .logo {
         height: 75px;
     }
@@ -113,7 +114,7 @@ header {
 }
 
 .btn-grey {
-    background-color: rgb(238, 238, 238);
+    background-color: $main-background;
     padding: 12px 15px;
     display: flex;
     border: 0;

@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SigninComponent } from './signin/signin.component';
 import { RegisterComponent } from './register/register.component';
 import { CartComponent } from './cart/cart.component';
+import { ButtonComponent } from './atoms/button/button.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CartComponent } from './cart/cart.component';
     FooterComponent,
     SigninComponent,
     RegisterComponent,
-    CartComponent
+    CartComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

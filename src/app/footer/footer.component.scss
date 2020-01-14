@@ -1,5 +1,7 @@
+@import '../../constants.scss';
+
 footer {
-    background-color: rgb(238, 238, 238);
+    background-color: $main-background;
     padding: 10px 0;
 }
 
@@ -10,7 +12,7 @@ p {
 
 /* iPad and medium screens*/
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: $medium-Screen-Size) {
     p {
         font-size: .8rem;
     }
@@ -18,7 +20,7 @@ p {
 
 /* iPad and large screens*/
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: $large-Screen-Size) {
     p {
         font-size: 1rem;
     }

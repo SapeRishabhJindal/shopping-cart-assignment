@@ -1,5 +1,7 @@
+@import '../../constants.scss';
+
 .box-shadow {
-    box-shadow: 0 8px 8px rgb(219, 219, 219);
+    box-shadow: 0 8px 8px $box-shadow-color;
 }
 
 .category-img {
@@ -35,8 +37,8 @@ p {
     width: auto;
     padding: 4px 8px;
     margin-top: -22px;
-    background-color: #717171;
-    color: white !important;
+    background-color: $carousel-button;
+    color: $button-main-color !important;
     font-weight: bold;
     font-size: .6rem;
     transition: 0.6s ease;
@@ -55,7 +57,7 @@ p {
 /* On hover, add a black background color with a little bit see-through */
 
 .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color:$carousel-button-hover;
 }
 
 /* The dots/bullets/indicators */
@@ -65,14 +67,14 @@ p {
     height: 6px;
     width: 6px;
     margin: 0 2px;
-    background-color: #bbb;
+    background-color: $input-color;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-    background-color: #717171;
+    background-color: $carousel-button;
 }
 
 /* Fading animation */
@@ -104,7 +106,7 @@ p {
 
 /* Carousel Css ends*/
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: $medium-Screen-Size) {
     .category-img {
         height: 120px;
         width: 150px;
@@ -125,7 +127,7 @@ p {
     }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: $large-Screen-Size) {
     .category-img {
         height: 150px;
         width: 220px;
