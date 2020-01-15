@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, Input } from '@angular/core';
+import { Component, OnInit, HostListener, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-product-details',
@@ -11,6 +11,7 @@ export class ProductDetailsComponent implements OnInit {
     this.checkScreenSize(event.target.innerWidth);
   }
   @Input() products: [];
+  @Output() BuyNowClicked = new EventEmitter<any>();
 
   isSmallScreen = true;
   isMediumScreen = false;
@@ -34,5 +35,9 @@ export class ProductDetailsComponent implements OnInit {
     this.isSmallScreen = small;
     this.isMediumScreen = medium;
     this.isLargeScreen = large;
+  }
+
+  AddToCart(product) {
+    this.BuyNowClicked.emit(product);
   }
 }

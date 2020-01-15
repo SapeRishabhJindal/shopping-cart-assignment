@@ -4,7 +4,7 @@
         <div class="title">
             <div class="float-left">
                 <p>My Cart</p>
-                <span *ngIf="cartItem.length > 0">({{cartItem.length}} item)</span>
+                <span *ngIf="cartItem.length > 0">({{cartItemQuantity}} item)</span>
             </div>
             <div class="float-right close-cart" id="close-cart" tabindex="1" (click)="closeCartClicked()">
                 <i class="fa fa-times" aria-hidden="true"></i>
@@ -22,7 +22,7 @@
                                 (click)="substractQuantity(i)"></i>
                             <span>{{item.quantity}}</span>
                             <i class="fa fa-plus" tabindex="{{i+2}}" id="addItem{{i}}" aria-hidden="true"
-                                (click)="addQuantity(i)"></i>
+                                (click)="addQuantity(item)"></i>
                             <span>X </span>
                             <span>Rs. {{item.price}}</span>
                         </div>

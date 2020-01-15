@@ -18,7 +18,10 @@ export class HeaderComponent implements OnInit {
   constructor(private service: ServiceService) {
     this.service.updateCart().subscribe(item => {
       if (item) {
-        this.cartItemCount = item.item.length;
+        this.cartItemCount = 0;
+        item.item.forEach(element => {
+          this.cartItemCount += element.quantity;
+        });
       }
     });
   }

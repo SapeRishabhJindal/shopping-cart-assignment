@@ -11,6 +11,7 @@ export class CartComponent implements OnInit, AfterViewInit {
   cartItem = [];
   subscription: Subscription;
   totalPrice = 0;
+  cartItemQuantity = 0;
   @Output() closeCart = new EventEmitter<boolean>();
 
   @HostListener('document:keydown', ['$event'])
@@ -63,8 +64,10 @@ export class CartComponent implements OnInit, AfterViewInit {
       if (item) {
         this.cartItem = item.item;
         this.totalPrice = 0;
+        this.cartItemQuantity = 0;
         this.cartItem.forEach(elem => {
-          this.totalPrice = this.totalPrice + (elem.quantity * elem.price);
+          this.totalPrice += (elem.quantity * elem.price);
+          this.cartItemQuantity += elem.quantity;
         })
       }
     });
@@ -87,18 +90,21 @@ export class CartComponent implements OnInit, AfterViewInit {
     this.closeCart.emit(true);
   }
 
-  addQuantity(i) {
-    this.cartItem[i].quantity++;
-    this.totalPrice = this.totalPrice + this.cartItem[i].price;
+  addQuantity(item) {
+    // this.cartItem[i].quantity++;
+    // this.totalPrice = this.totalPrice + this.cartItem[i].price;
+    // this.cartItemQuantity++;
+    this.service.addToCart(item);
   }
   substractQuantity(i) {
+    this.cartItemQuantity--;
     if (this.cartItem[i].quantity === 1) {
       this.cartItem.splice(i, 1);
       this.service.removeItemFromCart(this.cartItem);
       document.getElementById(`removeItem${i + 1}`).focus();
     } else {
       this.cartItem[i].quantity--;
-      this.totalPrice = this.totalPrice - this.cartItem[i].price;
+      this.service.removeItemFromCart(this.cartItem);
     }
   }
 }
