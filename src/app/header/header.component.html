@@ -30,10 +30,15 @@
                     <a href="javascript:void(0)" (click)="toggleMobileMenu()" *ngIf="isSmallScreen"><i
                             class="fa fa-bars d-inline d-sm-none d-md-none d-lg-none hamburger-menu-icon"
                             aria-hidden="true"></i></a>
-                    <button class="btn-grey float-right " (click)="toggleCart()">
+                    <app-button classList="btn-grey float-right" (click)="toggleCart()">
                         <img src="../../assets/static/images/cart.svg" alt="cart image" class="cart-img">
                         <span>{{cartItemCount}} items</span>
-                    </button>
+                    </app-button>
+
+                    <!-- <button class="btn-grey float-right " (click)="toggleCart()">
+                        <img src="../../assets/static/images/cart.svg" alt="cart image" class="cart-img">
+                        <span>{{cartItemCount}} items</span>
+                    </button> -->
                 </div>
             </div>
         </nav>

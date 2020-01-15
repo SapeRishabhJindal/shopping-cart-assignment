@@ -10,31 +10,7 @@
         <div style="text-align:center">
             <span class="dot" (click)="currentSlide(i+1)" *ngFor="let banner of banners;index as i"></span>
         </div>
-
-
-        <div *ngFor="let item of categories;index as i">
-            <div class="row box-shadow px-0 py-2" *ngIf="i%2 === 0">
-                <div class="align-self-center text-center w-25 ">
-                    <img src="{{item.imageUrl}}" alt="{{item.key}}" class="category-img ">
-                </div>
-                <div class="w-75 text-center">
-                    <h2>{{item.name}}</h2>
-                    <p>{{item.description}}</p>
-                    <button class="btn-main mb-4" [routerLink]="['/products',item.id]">Explore {{item.key}}</button>
-                </div>
-            </div>
-
-            <div class="row box-shadow px-0 py-2" *ngIf="i%2 !== 0">
-                <div class="w-75 text-center ">
-                    <h2>{{item.name}}</h2>
-                    <p>{{item.description}}</p>
-                    <button class="btn-main mb-4" [routerLink]="['/products',item.id]">Explore {{item.key}}</button>
-                </div>
-                <div class="align-self-center text-center w-25">
-                    <img src="{{item.imageUrl}}" alt="{{item.key}}" class="category-img">
-                </div>
-            </div>
-        </div>
+        <app-categories [categories]="categories"></app-categories>
     </div>
 </section>
 

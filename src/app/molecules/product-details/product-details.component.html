@@ -1,0 +1,57 @@
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3" *ngFor="let product of products;index as i">
+
+        <h3>{{product.name}}</h3>
+
+        <div class="row p-0 d-lg-none" *ngIf="isSmallScreen || isMediumScreen">
+            <div class="col col-sm-5 col-md-5 col-align-self-center text-center p-0">
+                <img class="product-img" src="{{product.imageURL}}" alt="{{product.name}}">
+            </div>
+            <div class="col col-sm-7 col-md-7">
+                <div class="row">
+                    <div class="col pl-1">
+                        <p class="product-description">{{product.description}}</p>
+                    </div>
+                </div>
+                <div class="row d-block d-sm-none d-md-none d-lg-none">
+                    <div class="col">
+                        <app-button classList="btn-main btn-buy-now" (click)="AddToCart(product)">Buy Now @
+                            Rs.
+                            {{product.price}}</app-button>
+                        <!-- <button class="btn-main btn-buy-now" (click)="AddToCart(product)">Buy Now @ Rs.
+                        {{product.price}} </button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row p-0 d-none d-lg-block" *ngIf="!isSmallScreen">
+            <div class="col col-align-self-center text-center p-0">
+                <img class="product-img" src="{{product.imageURL}}" alt="{{product.name}}">
+            </div>
+        </div>
+        <div class="row p-0 d-none d-lg-block" *ngIf="!isSmallScreen">
+            <div class="col-xl-12">
+                <p class="product-description">{{product.description}}</p>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-6 col-xl-6 d-none d-lg-block align-self-center" *ngIf="!isSmallScreen">
+                <p> MRP Rs. {{product.price}}</p>
+            </div>
+            <div class="col-6 col-xl-6 d-none d-lg-block " *ngIf="!isSmallScreen">
+                <app-button classList="btn-main btn-buy-now" (click)="AddToCart(product)">Buy Now
+                </app-button>
+                <!-- <button class="btn-main btn-buy-now" (click)="AddToCart(product)">Buy Now</button> -->
+            </div>
+        </div>
+        <div class="row d-none d-sm-block d-md-block d-lg-none d-xl-none" *ngIf="isSmallScreen || isMediumScreen">
+            <div class="col">
+                <app-button classList="btn-main btn-buy-now" (click)="AddToCart(product)">Buy Now @ Rs.
+                    {{product.price}} </app-button>
+                <!-- <button class="btn-main btn-buy-now" (click)="AddToCart(product)">Buy Now @ Rs.
+                {{product.price}} </button> -->
+            </div>
+        </div>
+        <hr size="20">
+    </div>
+</div>

@@ -1,0 +1,39 @@
+@import '../../../constants.scss';
+
+.box-shadow {
+    box-shadow: 0 8px 8px $box-shadow-color;
+}
+
+.category-img {
+    height: 80px;
+    width: 80px;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+p {
+    font-size: .6rem;
+    padding: 5px;
+}
+
+@media only screen and (min-width: $medium-Screen-Size) {
+    .category-img {
+        height: 120px;
+        width: 150px;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: $large-Screen-Size) {
+    .category-img {
+        height: 150px;
+        width: 220px;
+    }
+}

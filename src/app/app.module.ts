@@ -15,6 +15,8 @@ import { SigninComponent } from './signin/signin.component';
 import { RegisterComponent } from './register/register.component';
 import { CartComponent } from './cart/cart.component';
 import { ButtonComponent } from './atoms/button/button.component';
+import { CategoriesComponent } from './molecules/categories/categories.component';
+import { ProductDetailsComponent } from './molecules/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { ButtonComponent } from './atoms/button/button.component';
     SigninComponent,
     RegisterComponent,
     CartComponent,
-    ButtonComponent
+    ButtonComponent,
+    CategoriesComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
