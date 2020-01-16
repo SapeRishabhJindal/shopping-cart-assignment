@@ -20,13 +20,15 @@ header {
       justify-content: space-between;
 
       a {
-        width: 10%;
         .nav__container__logo {
           height: 50px;
           @media only screen and (min-width: $medium-Screen-Size) {
             height: 75px;
             padding-bottom: 0.5rem;
           }
+        }
+        @media only screen and (min-width: $medium-Screen-Size) {
+          width: 10%;
         }
       }
 
@@ -69,12 +71,15 @@ header {
   }
 
   .mobile__menu {
-    list-style: none;
-    cursor: pointer;
-    li {
-      padding: 2px;
-      border-bottom: 1px solid $hamburger-icon-borber;
-      font-size: 0.9rem;
+    ul {
+      list-style: none;
+      cursor: pointer;
+      margin-left: 10px;
+      li {
+        padding: 2px;
+        border-bottom: 1px solid $hamburger-icon-borber;
+        font-size: 0.9rem;
+      }
     }
   }
 }

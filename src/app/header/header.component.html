@@ -31,8 +31,8 @@
             </div>
         </div>
     </nav>
-    <div *ngIf="showMobileMenu">
-        <ul class="mobile__menu" (click)="toggleMobileMenu()">
+    <div class="mobile__menu" *ngIf="showMobileMenu">
+        <ul (click)="toggleMobileMenu()">
             <li (click)="closeCart()"><a routerLink="/home" routerLinkActive="active">Home</a></li>
             <li (click)="closeCart()"><a [routerLink]="['/products','']" routerLinkActive="active">Products</a></li>
             <li (click)="closeCart()"><a routerLink="/signin" routerLinkActive="active">SignIn</a></li>
