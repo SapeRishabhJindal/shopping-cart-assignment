@@ -1,27 +1,17 @@
-@import '../../constants.scss';
+@import "../../constants.scss";
 
 footer {
-    background-color: $main-background;
-    padding: 10px 0;
-}
-
-p {
-    font-size: .55rem;
-    margin-bottom: 0;
-}
-
-/* iPad and medium screens*/
-
-@media only screen and (min-width: $medium-Screen-Size) {
-    p {
-        font-size: .8rem;
+  background-color: $main-background;
+  padding: 10px 0;
+  p {
+    margin: auto;
+    max-width: 1140px;
+    font-size: 0.55rem;
+    @media only screen and (min-width: $medium-Screen-Size) {
+      font-size: 0.8rem;
     }
-}
-
-/* iPad and large screens*/
-
-@media only screen and (min-width: $large-Screen-Size) {
-    p {
-        font-size: 1rem;
+    @media only screen and (min-width: $large-Screen-Size) {
+      font-size: 1rem;
     }
+  }
 }

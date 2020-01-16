@@ -1,11 +1,11 @@
 <section>
     <div class="container-xl">
-        <div class="slideshow-container">
-            <div class="mySlides fade" *ngFor="let banner of banners;index as i">
+        <div class="slideshow__container">
+            <div class="mySlides slideshow__container__fade" *ngFor="let banner of banners;index as i">
                 <img src="{{banner.bannerImageUrl}}" alt="{{banner.bannerImageAlt}}" style="width:100%">
             </div>
-            <a class="prev" (click)="plusSlides(-1)">prev</a>
-            <a class="next" (click)="plusSlides(1)">next</a>
+            <a class="slideshow__container__prev" (click)="plusSlides(-1)">prev</a>
+            <a class="slideshow__container__next" (click)="plusSlides(1)">next</a>
         </div>
         <div style="text-align:center">
             <span class="dot" (click)="currentSlide(i+1)" *ngFor="let banner of banners;index as i"></span>
@@ -13,28 +13,3 @@
         <app-categories [categories]="categories"></app-categories>
     </div>
 </section>
-
-
-<!-- <div *ngFor="let item of categories;index as i">
-    <div class="row box-shadow flex-container category-container" *ngIf="i%2 === 0">
-        <div class="width-30">
-            <img src="{{item.imageUrl}}" alt="{{item.key}}" class="category-img">
-        </div>
-        <div class="width-70">
-            <h2>{{item.name}}</h2>
-            <p>{{item.description}}</p>
-            <button class="btn-main" [routerLink]="['/products',item.id]">Explore {{item.key}}</button>
-        </div>
-    </div>
-
-    <div class="row box-shadow flex-container category-container " *ngIf="i%2 !== 0">
-        <div class="width-70">
-            <h2>{{item.name}}</h2>
-            <p>{{item.description}}</p>
-            <button class="btn-main" [routerLink]="['/products',item.id]">Explore {{item.key}}</button>
-        </div>
-        <div class="width-30">
-            <img src="{{item.imageUrl}}" alt="{{item.key}}" class="category-img">
-        </div>
-    </div>
-</div> -->
