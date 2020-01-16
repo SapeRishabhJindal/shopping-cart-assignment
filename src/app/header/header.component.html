@@ -1,84 +1,45 @@
 <!-- Header Starts -->
 <header>
-    <div class="container-xl">
-        <nav>
-            <div class="row d-none d-sm-block d-md-block d-lg-block" *ngIf="isMediumLargeScreen">
-                <div class="col text-right p-0 signin-register">
-                    <span class="mr-2"><a routerLink="/signin" routerLinkActive="active">SignIn</a></span>
-                    <span><a routerLink="/register" class="mr-1" routerLinkActive="active">Register</a></span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col p-0 col-sm-5 col-md-3 col-lg-2">
-                    <a routerLink="/home" routerLinkActive="active">
-                        <img class="float-left logo pb-sm-2" src="../../assets/static/images/logo.png"
-                            alt="Sabka Bazar Logo" (click)="closeCart()">
-                    </a>
-                </div>
-                <div class="d-none d-sm-block d-md-block d-lg-block col-sm-4 col-md-7 col-lg-8 "
-                    *ngIf="isMediumLargeScreen">
-                    <ul class="menu-list">
-                        <li class="d-inline mr-3" (click)="closeCart()"> <a routerLink="/home"
-                                routerLinkActive="active">Home</a>
-                        </li>
-                        <li class="d-inline" (click)="closeCart()"> <a [routerLink]="['/products','']"
-                                routerLinkActive="active">Products</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col p-0 col-sm-3 col-md-2 col-lg-2 align-self-end text-align-end ">
-                    <a href="javascript:void(0)" (click)="toggleMobileMenu()" *ngIf="isSmallScreen"><i
-                            class="fa fa-bars d-inline d-sm-none d-md-none d-lg-none hamburger-menu-icon"
-                            aria-hidden="true"></i></a>
-                    <app-button classList="btn-grey float-right" (click)="toggleCart()">
-                        <img src="../../assets/static/images/cart.svg" alt="cart image" class="cart-img">
-                        <span>{{cartItemCount}} items</span>
-                    </app-button>
-
-                    <!-- <button class="btn-grey float-right " (click)="toggleCart()">
-                        <img src="../../assets/static/images/cart.svg" alt="cart image" class="cart-img">
-                        <span>{{cartItemCount}} items</span>
-                    </button> -->
-                </div>
-            </div>
-        </nav>
-        <div *ngIf="showMobileMenu" class="d-block d-sm-none d-md-none d-lg-none">
-            <ul class="mobile-menu-list" (click)="toggleMobileMenu()">
-                <li (click)="closeCart()"><a routerLink="/home" routerLinkActive="active">Home</a></li>
-                <li (click)="closeCart()"><a [routerLink]="['/products','']" routerLinkActive="active">Products</a></li>
-                <li (click)="closeCart()"><a routerLink="/signin" routerLinkActive="active">SignIn</a></li>
-                <li (click)="closeCart()"><a routerLink="/register" class="mr-1" routerLinkActive="active">Register</a>
+    <nav>
+        <div class="nav__signinRegister" *ngIf="isMediumLargeScreen">
+            <ul *ngIf="isMediumLargeScreen">
+                <li (click)="closeCart()"> <a routerLink="/signin" routerLinkActive="active">SignIn</a>
+                </li>
+                <li (click)="closeCart()"> <a routerLink="/register" routerLinkActive="active">Register</a>
                 </li>
             </ul>
         </div>
-    </div>
-    <!-- <div class="row">
-        <div>
-            <div class="nav-top">
-                <span><a routerLink="/signin" routerLinkActive="active">SignIn</a></span>
-                <span><a routerLink="/register" routerLinkActive="active">Register</a></span>
-            </div>
-            <div class="flex-container">
-                <div>
-                    <img class="logo" src="../../assets/static/images/logo.png" alt="Sabka Bazar Logo">
-                </div>
-                <div class="main-nav">
-                    <ul>
-                        <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-                        <li>
-                            <a [routerLink]="['/products','']" routerLinkActive="active">Products</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <button href="" class="btn-grey" (click)="toggleCart()">
-                        <img src="../../assets/static/images/cart.svg" class="cart-img">
-                        <span>0 items</span>
-                    </button>
-                </div>
+        <div class="flex-container nav__container">
+            <a routerLink="/home" routerLinkActive="active">
+                <img class="float-left nav__container__logo" src="../../assets/static/images/logo.png"
+                    alt="Sabka Bazar Logo" (click)="closeCart()">
+            </a>
+            <ul *ngIf="isMediumLargeScreen">
+                <li (click)="closeCart()"> <a routerLink="/home" routerLinkActive="active">Home</a>
+                </li>
+                <li (click)="closeCart()"> <a [routerLink]="['/products','']" routerLinkActive="active">Products</a>
+                </li>
+            </ul>
+            <div class="nav__container__cart">
+                <a href="javascript:void(0)" (click)="toggleMobileMenu()" *ngIf="isSmallScreen"><i
+                        class="fa fa-bars nav__container__cart__hamburger"></i></a>
+                <app-button classList="btn-grey float-right" (click)="toggleCart()">
+                    <img src="../../assets/static/images/cart.svg" alt="cart image" class="nav__container__cartImg"
+                        aria-hidden="true">
+                    <span>{{cartItemCount}} items</span>
+                </app-button>
             </div>
         </div>
-    </div> -->
+    </nav>
+    <div *ngIf="showMobileMenu">
+        <ul class="mobile__menu" (click)="toggleMobileMenu()">
+            <li (click)="closeCart()"><a routerLink="/home" routerLinkActive="active">Home</a></li>
+            <li (click)="closeCart()"><a [routerLink]="['/products','']" routerLinkActive="active">Products</a></li>
+            <li (click)="closeCart()"><a routerLink="/signin" routerLinkActive="active">SignIn</a></li>
+            <li (click)="closeCart()"><a routerLink="/register" class="mr-1" routerLinkActive="active">Register</a>
+            </li>
+        </ul>
+    </div>
 </header>
 <!-- Header Ends -->
 <section *ngIf="showCart">
