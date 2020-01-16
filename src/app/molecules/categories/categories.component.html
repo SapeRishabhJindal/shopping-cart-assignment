@@ -1,27 +1,25 @@
 <div *ngFor="let item of categories;index as i">
-    <div class="row box-shadow px-0 py-2" *ngIf="i%2 === 0">
-        <div class="align-self-center text-center w-25 ">
-            <img src="{{item.imageUrl}}" alt="{{item.key}}" class="category-img ">
+    <div class="category" *ngIf="i%2 === 0">
+        <div class="category__image">
+            <img src="{{item.imageUrl}}" alt="{{item.key}}" class="category__image--img ">
         </div>
-        <div class="w-75 text-center">
+        <div class="category__description">
             <h2>{{item.name}}</h2>
             <p>{{item.description}}</p>
             <app-button classList="btn-main mb-4" [routerLink]="['/products',item.id]">Explore {{item.key}}
             </app-button>
-            <!-- <button class="btn-main mb-4" [routerLink]="['/products',item.id]">Explore {{item.key}}</button> -->
         </div>
     </div>
 
-    <div class="row box-shadow px-0 py-2" *ngIf="i%2 !== 0">
-        <div class="w-75 text-center ">
+    <div class="category" *ngIf="i%2 !== 0">
+        <div class="category__description">
             <h2>{{item.name}}</h2>
             <p>{{item.description}}</p>
             <app-button classList="btn-main mb-4" [routerLink]="['/products',item.id]">Explore {{item.key}}
             </app-button>
-            <!-- <button class="btn-main mb-4" [routerLink]="['/products',item.id]">Explore {{item.key}}</button> -->
         </div>
-        <div class="align-self-center text-center w-25">
-            <img src="{{item.imageUrl}}" alt="{{item.key}}" class="category-img">
+        <div class="category__image">
+            <img src="{{item.imageUrl}}" alt="{{item.key}}" class="category__image--img ">
         </div>
     </div>
 </div>

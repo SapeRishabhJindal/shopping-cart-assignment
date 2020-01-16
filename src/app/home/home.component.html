@@ -1,15 +1,13 @@
 <section>
-    <div class="container-xl">
-        <div class="slideshow__container">
-            <div class="mySlides slideshow__container__fade" *ngFor="let banner of banners;index as i">
-                <img src="{{banner.bannerImageUrl}}" alt="{{banner.bannerImageAlt}}" style="width:100%">
-            </div>
-            <a class="slideshow__container__prev" (click)="plusSlides(-1)">prev</a>
-            <a class="slideshow__container__next" (click)="plusSlides(1)">next</a>
+    <div class="slideshow__container">
+        <div class="mySlides slideshow__container__fade" *ngFor="let banner of banners;index as i">
+            <img src="{{banner.bannerImageUrl}}" alt="{{banner.bannerImageAlt}}" style="width:100%">
         </div>
-        <div style="text-align:center">
-            <span class="dot" (click)="currentSlide(i+1)" *ngFor="let banner of banners;index as i"></span>
-        </div>
-        <app-categories [categories]="categories"></app-categories>
+        <a class="slideshow__container__prev" (click)="plusSlides(-1)">prev</a>
+        <a class="slideshow__container__next" (click)="plusSlides(1)">next</a>
     </div>
+    <div style="text-align:center">
+        <span class="dot" (click)="currentSlide(i+1)" *ngFor="let banner of banners;index as i"></span>
+    </div>
+    <app-categories [categories]="categories"></app-categories>
 </section>
