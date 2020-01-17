@@ -1,24 +1,29 @@
-@import '../../../constants.scss';
+@import "../../../constants.scss";
 
 .btn-grey {
-    background-color: $main-background;
-    padding: 13px 15px;
-    display: flex;
-    border: 0;
+  background-color: $main-background;
+  padding: 13px 15px;
+  display: flex;
+  border: 0;
 }
 
 .btn-buy-now {
-    width: 100%;
-    margin-bottom: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.btn-transparent {
+  background-color: transparent;
+  border: transparent;
 }
 
 @media only screen and (min-width: $medium-Screen-Size) {
-    .btn-grey {
-        padding: 22px 20px;
-        width: 125px;
-    }
-    .btn-buy-now {
-        width: 100%;
-        margin-bottom: 10px;
-    }
+  .btn-grey {
+    padding: 22px 20px;
+    width: 125px;
+  }
+  .btn-buy-now {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }

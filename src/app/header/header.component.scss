@@ -17,6 +17,7 @@ header {
       }
     }
     .nav__container {
+      display: flex;
       justify-content: space-between;
       a {
         .nav__container__logo {
@@ -46,14 +47,12 @@ header {
       }
 
       .nav__container__cart {
-        align-self: flex-end;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
         width: 50%;
         text-align: right;
         .nav__container__cart__hamburger {
-          display: inline;
-          top: 24px;
-          position: relative;
-          right: 5px;
           font-size: 1.4rem;
           font-weight: 300;
           color: $hamburger-icon-color;
@@ -70,15 +69,12 @@ header {
   }
 
   .mobile__menu {
-    ul {
-      list-style: none;
-      cursor: pointer;
-      margin-left: 10px;
-      li {
-        padding: 2px;
-        border-bottom: 1px solid $hamburger-icon-borber;
-        font-size: 0.9rem;
-      }
+    list-style: none;
+    margin-left: 10px;
+    li {
+      padding: 2px;
+      border-bottom: 1px solid $hamburger-icon-borber;
+      font-size: 0.9rem;
     }
   }
 }

@@ -73,7 +73,7 @@ input {
   font-size: 1rem;
   padding: 10px 10px 10px 5px;
   display: block;
-  width: 320px;
+  width: 100%;
   border: none;
   border-radius: 0;
   border-bottom: 1px solid $input-color;
@@ -137,6 +137,9 @@ label {
   .btn-main {
     width: 50%;
     font-size: 1rem;
+  }
+  input {
+    width: 320px;
   }
 }
 

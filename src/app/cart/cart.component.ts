@@ -91,11 +91,9 @@ export class CartComponent implements OnInit, AfterViewInit {
   }
 
   addQuantity(item) {
-    // this.cartItem[i].quantity++;
-    // this.totalPrice = this.totalPrice + this.cartItem[i].price;
-    // this.cartItemQuantity++;
     this.service.addToCart(item);
   }
+
   substractQuantity(i) {
     this.cartItemQuantity--;
     if (this.cartItem[i].quantity === 1) {
