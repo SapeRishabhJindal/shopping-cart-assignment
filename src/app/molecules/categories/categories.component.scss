@@ -4,11 +4,11 @@
   display: flex;
   box-shadow: 0 8px 8px $box-shadow-color;
   padding: 0.5rem 0;
-  .category__image {
+  .category__image__container {
     width: 30%;
     text-align: center;
     align-self: center;
-    .category__image--img {
+    img {
       height: 80px;
       width: 80px;
       @media only screen and (min-width: $medium-Screen-Size) {
