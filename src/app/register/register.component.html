@@ -7,27 +7,27 @@
             </div>
             <div class="col-md-6">
                 <form method="POST" (ngSubmit)="registerClicked()">
-                    <div class="group">
+                    <div class="input__group">
                         <input type="text" required="required" [formControl]="firstName" />
-                        <span class="bar"></span>
+                        <span class="input__bar"></span>
                         <label>First Name</label>
                         <div *ngIf=" firstName.touched ||submitted">
                             <div *ngIf="firstName.errors?.required" aria-describedby="First Name is required"
                                 aria-live="assertive" class="form-error">First Name is required</div>
                         </div>
                     </div>
-                    <div class="group">
+                    <div class="input__group">
                         <input type="text" required="required" [formControl]="lastName" />
-                        <span class="bar"></span>
+                        <span class="input__bar"></span>
                         <label>Last Name</label>
                         <div *ngIf="lastName.touched || submitted">
                             <div *ngIf="lastName.errors?.required" aria-describedby="Last Name is required"
                                 aria-live="assertive" class="form-error">Last Name is required</div>
                         </div>
                     </div>
-                    <div class="group">
+                    <div class="input__group">
                         <input type="text" required="required" [formControl]="email" />
-                        <span class="bar"></span>
+                        <span class="input__bar"></span>
                         <label>Email</label>
                         <div *ngIf=" email.touched || submitted">
                             <div *ngIf="email.errors?.required" aria-describedby="Email is required"
@@ -37,9 +37,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="group">
+                    <div class="input__group">
                         <input type="password" required="required" [formControl]="password" />
-                        <span class="bar"></span>
+                        <span class="input__bar"></span>
                         <label>Password</label>
                         <div *ngIf="password.touched || submitted">
                             <div *ngIf="password.errors?.required" aria-describedby="Password is required"
@@ -53,9 +53,9 @@
                                 number and alphabet</div>
                         </div>
                     </div>
-                    <div class="group">
+                    <div class="input__group">
                         <input type="password" required="required" [formControl]="confirmPassword" />
-                        <span class="bar"></span>
+                        <span class="input__bar"></span>
                         <label>Confirm Password</label>
                         <div *ngIf="confirmPassword.touched || submitted">
                             <div *ngIf="confirmPassword.errors?.required"
