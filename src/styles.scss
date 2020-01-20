@@ -47,21 +47,6 @@ section {
   }
 }
 
-.btn-main {
-  width: 65%;
-  background-color: $button-main;
-  padding: 5px 0;
-  border: 0;
-  border-radius: 2px;
-  color: $button-main-color;
-  cursor: pointer;
-  font-size: 70%;
-}
-
-.btn-main:hover {
-  background-color: $button-main-hover;
-}
-
 .input__group {
   position: relative;
   margin: 15px 0;
@@ -128,23 +113,5 @@ section {
   .form-error {
     font-size: 0.8rem;
     color: $error;
-  }
-}
-
-/* iPad and medium screens*/
-
-@media only screen and (min-width: $medium-Screen-Size) {
-  .btn-main {
-    width: 50%;
-    font-size: 1rem;
-  }
-}
-
-/* iPad and large screens*/
-
-@media only screen and (min-width: $large-Screen-Size) {
-  .btn-main {
-    width: 40%;
-    font-size: 1rem;
   }
 }

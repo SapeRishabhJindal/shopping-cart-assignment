@@ -45,15 +45,15 @@
 
         <div class="checkout-container" *ngIf="cartItem.length > 0">
             <p>Promo code can be applied on the payment page</p>
-            <div class="btn-main mb-md-4" tabindex="0" id="proceed-to-checkout" (click)="closeCartClicked()">
+            <app-button classList="btn-main mb-md-4" tabindex="0" id="proceed-to-checkout" (click)="closeCartClicked()">
                 <span class="float-left">Proceed to Checkout</span>
                 <span class="float-right">Rs.{{totalPrice}}</span>
-            </div>
+            </app-button>
         </div>
         <div class="checkout-container text-center" *ngIf="cartItem.length === 0">
-            <div class="btn-main mb-md-4" tabindex="0" id="shopping-cart-btn" (click)="closeCartClicked()">
+            <app-button classList="btn-main mb-md-4" tabindex="0" id="shopping-cart-btn" (click)="closeCartClicked()">
                 <span class="d-inline-block">Start Shopping</span>
-            </div>
+            </app-button>
         </div>
     </div>
 </div>
