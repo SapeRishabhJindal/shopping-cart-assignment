@@ -1,21 +1,18 @@
-<div class="container-xl">
-    <div class="row p-0">
-        <div class="col-md-3 col-sm-3 col-lg-2 p-0">
-            <div class="side-nav d-none d-sm-block" *ngIf="!isSmallScreen">
-                <ul>
-                    <li *ngFor="let cat of category" (click)="filterProducts(cat.id)"
-                        [ngClass]="{'side-nav-active': cat.id===selectedID}">
-                        <a href="javascript:void(0)">{{cat.name}}</a></li>
-                </ul>
-            </div>
-            <select class="d-block d-sm-none d-md-none d-lg-none" *ngIf="isSmallScreen"
-                (change)="filterProducts($event.target.value)">
-                <option *ngFor="let cat of category" value="{{cat.id}}">{{cat.name}}</option>
-            </select>
-        </div>
-        <div class="col-md-9 col-sm-9 col-lg-10 mt-2">
-            <app-product-details (BuyNowClicked)="AddToCart($event)" [products]="products"></app-product-details>
-        </div>
+<div class="products">
+    <div class="side-nav">
+        <ul *ngIf="!isSmallScreen">
+            <li *ngFor="let cat of category" (click)="filterProducts(cat.id)"
+                [ngClass]="{'side-nav-active': cat.id===selectedID}">
+                <app-button classList="btn-transparent">
+                    {{cat.name}}</app-button>
+            </li>
+        </ul>
+        <select *ngIf="isSmallScreen" (change)="filterProducts($event.target.value)">
+            <option *ngFor="let cat of category" value="{{cat.id}}">{{cat.name}}</option>
+        </select>
+    </div>
+    <div class="products__container">
+        <app-product-details (BuyNowClicked)="AddToCart($event)" [products]="products"></app-product-details>
     </div>
 </div>
 

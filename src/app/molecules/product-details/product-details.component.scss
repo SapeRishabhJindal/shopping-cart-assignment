@@ -1,58 +1,140 @@
-@import '../../../constants.scss';
+@import "../../../constants.scss";
+
+.product__content {
+  display: flex;
+  flex-wrap: wrap;
+  .product__card {
+    width: 100%;
+    padding: 10px;
+    @media only screen and (min-width: $medium-Screen-Size) {
+      width: 50%;
+      padding: 5px;
+    }
+    @media only screen and (min-width: $large-Screen-Size) {
+      width: 25%;
+    }
+    h3 {
+      font-size: 1.2rem;
+      @media only screen and (min-width: $medium-Screen-Size) {
+        height: 60px;
+        font-size: 1rem;
+      }
+    }
+    .product_card_main {
+      display: flex;
+      @media only screen and (min-width: $large-Screen-Size) {
+        flex-direction: column;
+      }
+      .product__card__image {
+        width: 50%;
+        text-align: center;
+        @media only screen and (min-width: $large-Screen-Size) {
+          width: 100%;
+        }
+        img {
+          max-width: 100%;
+          @media only screen and (min-width: $medium-Screen-Size) {
+            max-width: 100%;
+          }
+          @media only screen and (min-width: $large-Screen-Size) {
+            max-width: 100%;
+          }
+        }
+      }
+      .product__card__description {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        @media only screen and (min-width: $large-Screen-Size) {
+          width: 100%;
+        }
+        p {
+          background-color: $main-background;
+          padding: 5px;
+          margin-bottom: 5px;
+          font-size: 0.7rem;
+          @media only screen and (min-width: $large-Screen-Size) {
+            font-size: 0.8rem;
+          }
+        }
+        @media only screen and (min-width: $medium-Screen-Size) {
+          background-color: $main-background;
+          height: 220px;
+          margin-bottom: 5px;
+        }
+        @media only screen and (min-width: $medium-Screen-Size) {
+          height: 180px;
+        }
+      }
+    }
+
+    .product__card__btn {
+      display: flex;
+      p {
+        padding: 7px;
+        width: 50%;
+      }
+      app-button {
+        width: 50%;
+      }
+    }
+  }
+}
 
 h3 {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 hr {
-    margin-top: 0px;
+  margin-top: 0px;
 }
 .product-img {
-    height: 150px;
-    width: 175px;
+  height: 150px;
+  width: 175px;
 }
 
 .product-description {
-    background-color: $main-background;
-    padding: 5px;
-    font-size: 0.7rem;
-    margin-bottom: 5px;
-    /* height: 140px; */
+  background-color: $main-background;
+  padding: 5px;
+  font-size: 0.7rem;
+  margin-bottom: 5px;
+  /* height: 140px; */
 }
 
 /* iPad and medium screens*/
 
 @media only screen and (min-width: $medium-Screen-Size) {
-    h3 {
-        height: 65px;
-        font-size: 1.1rem;
-    }
-   
-    .product-img {
-        height: 160px;
-        width: 135px;
-    }
-    .product-description {
-        font-size: 0.6;
-        margin-bottom: 5px;
-        height: 200px;
-    }
+  h3 {
+    height: 65px;
+    font-size: 1.1rem;
+  }
+
+  .product-img {
+    height: 160px;
+    width: 135px;
+  }
+  .product-description {
+    font-size: 0.6;
+    margin-bottom: 5px;
+    height: 200px;
+  }
 }
 
 /* iPad and large screens*/
 
 @media only screen and (min-width: $large-Screen-Size) {
-    h3 {
-        height: 60px;
-        font-size: 1rem;
-    }
-    .product-img {
-        height: 195px;
-        width: 195px;
-    }
-    .product-description {
-        height: 175px;
-    }
-    p {
-        font-size: 0.9rem;
-    }
+  h3 {
+    height: 60px;
+    font-size: 1rem;
+  }
+  .product-img {
+    height: 195px;
+    width: 195px;
+  }
+  .product-description {
+    height: 175px;
+  }
+  p {
+    font-size: 0.9rem;
+  }
 }

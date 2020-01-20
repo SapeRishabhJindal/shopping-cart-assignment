@@ -1,38 +1,54 @@
-@import '../../constants.scss';
+@import "../../constants.scss";
 
-select {
+.products {
+  max-width: 1140px;
+  display: flex;
+  flex-direction: column;
+  @media only screen and (min-width: $medium-Screen-Size) {
+    flex-direction: row;
+  }
+  margin: auto;
+  .side-nav {
     width: 100%;
-    background-color: $button-main;
-    color: $font-color-white;
-    padding: 10px;
-    margin-bottom: 10px;
-    ;
+    @media only screen and (min-width: $medium-Screen-Size) {
+      width: 25%;
+      background-color: $main-background;
+    }
+    @media only screen and (min-width: $large-Screen-Size) {
+      width: 16.66%;
+    }
+    ul {
+      li {
+        font-size: 0.8rem;
+        list-style: none;
+        padding: 10px 0;
+        margin-left: 10px;
+        border-bottom: 1px solid $side-nav-li-border;
+        cursor: pointer;
+      }
+      .side-nav-active {
+        border-right: 2px solid $font-color-black;
+      }
+    }
+    select {
+      width: 100%;
+      background-color: $button-main;
+      color: $font-color-white;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .products__container {
+    width: 100%;
+    @media only screen and (min-width: $medium-Screen-Size) {
+      width: 75%;
+    }
+    @media only screen and (min-width: $large-Screen-Size) {
+      width: 83.34%;
+    }
+  }
 }
-
-.side-nav {
-    padding: 0;
-    height: 100vh;
-    background-color: $main-background;
-}
-
-.side-nav li {
-    font-size: .8rem;
-    list-style: none;
-    padding: 10px 20px;
-    margin-left: 10px;
-    border-bottom: 1px solid $side-nav-li-border;
-    cursor: pointer;
-}
-
-
-.side-nav-active {
-    font-weight: bold;
-    border-right: 2px solid $font-color-black;
-}
-
-
-
-
 /* .product-container {
     width: 80%;
     display: flex;
