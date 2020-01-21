@@ -186,17 +186,9 @@
           font-size: 0.9rem;
         }
       }
-      .btn-main {
-        height: 40px;
-        width: 90%;
-        margin: auto;
-        margin-bottom: 15px;
-        border-radius: 5px;
-        @media only screen and (min-width: $medium-Screen-Size) {
-          height: 50px;
-        }
+      app-button {
         span {
-          padding: 5px 20px;
+          padding: 5px 10px;
         }
       }
     }
