@@ -15,27 +15,3 @@
         <app-product-details (BuyNowClicked)="AddToCart($event)" [products]="products"></app-product-details>
     </div>
 </div>
-
-
-<!-- <div class="row flex-container ">
-    <div class="side-nav">
-        <ul>
-            <li *ngFor="let cat of category" (click)="filterProducts(cat.id)">{{cat.name}}</li>
-        </ul>
-    </div>
-    <div class="product-container">
-        <div *ngFor="let product of products;index as i" class="product-card">
-            <h3>{{product.name}}</h3>
-            <img src="{{product.imageURL}}">
-            <div class="product-description">
-                <p>{{product.description}}</p>
-            </div>
-            <div class="flex-container ">
-                <div class="product-price">
-                    <p>MRP Rs.{{product.price}}</p>
-                </div>
-                <div class="product-buy-now"><button class="btn-main">Buy Now</button></div>
-            </div>
-        </div>
-    </div>
-</div> -->

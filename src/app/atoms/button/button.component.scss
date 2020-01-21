@@ -17,8 +17,7 @@
   outline: none;
 }
 
-.btn-main {
-  width: 65%;
+.btn {
   background-color: $button-main;
   padding: 5px 0;
   border: 0;
@@ -26,19 +25,41 @@
   color: $button-main-color;
   cursor: pointer;
   font-size: 70%;
+  @media only screen and (min-width: $medium-Screen-Size) {
+    font-size: 1rem;
+  }
   &:hover {
     background-color: $button-main-hover;
   }
-  @media only screen and (min-width: $medium-Screen-Size) {
-    width: 50%;
-    font-size: 1rem;
+  &.btn-main {
+    width: 65%;
+    @media only screen and (min-width: $medium-Screen-Size) {
+      width: 50%;
+      font-size: 1rem;
+    }
+    @media only screen and (min-width: $large-Screen-Size) {
+      width: 40%;
+    }
   }
-  @media only screen and (min-width: $medium-Screen-Size) {
-    width: 40%;
+  &.btn-buy-now {
+    width: 100%;
+    margin-bottom: 10px;
   }
-}
-
-.btn-buy-now {
-  width: 100%;
-  margin-bottom: 10px;
+  &.btn-submit {
+    width: 100%;
+    @media only screen and (min-width: $medium-Screen-Size) {
+      width: 90%;
+    }
+    @media only screen and (min-width: $large-Screen-Size) {
+      width: 60%;
+    }
+  }
+  &.btn-cart {
+    width: 90%;
+  }
+  &.btn-cart-icon {
+    padding: 0px 5px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+  }
 }

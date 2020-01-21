@@ -7,16 +7,16 @@
             </div>
             <div class="product__card__description">
                 <p>{{product.description}}</p>
-                <app-button classList="btn-main btn-buy-now" *ngIf="isSmallScreen" (click)="AddToCart(product)">Buy Now
+                <app-button classList="btn btn-buy-now" *ngIf="isSmallScreen" (click)="AddToCart(product)">Buy Now
                     @ Rs. {{product.price}}</app-button>
             </div>
         </div>
-        <app-button classList="btn-main btn-buy-now" *ngIf="isMediumScreen" (click)="AddToCart(product)">Buy Now @
+        <app-button classList="btn btn-buy-now" *ngIf="isMediumScreen" (click)="AddToCart(product)">Buy Now @
             Rs.
             {{product.price}}</app-button>
         <div class="product__card__btn" *ngIf="isLargeScreen">
             <p> MRP Rs. {{product.price}}</p>
-            <app-button classList="btn-main btn-buy-now" (click)="AddToCart(product)">Buy Now
+            <app-button classList="btn btn-buy-now" (click)="AddToCart(product)">Buy Now
             </app-button>
         </div>
         <hr size="20">
