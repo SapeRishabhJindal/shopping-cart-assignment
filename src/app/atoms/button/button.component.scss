@@ -56,6 +56,12 @@
   }
   &.btn-cart {
     width: 90%;
+    &.btn-cart-checkout {
+      margin-bottom: 15px;
+    }
+    &.btn-cart-startShopping {
+      margin: 15px 0;
+    }
   }
   &.btn-cart-icon {
     padding: 0px 5px;
