@@ -67,14 +67,13 @@
         }
       }
       .shoppingCart__title__close {
-        display: none;
-        color: $font-color-white;
+        color: $font-color-black;
         font-weight: 300;
         padding: 10px 10px;
+        float: right;
         cursor: pointer;
         @media only screen and (min-width: $large-Screen-Size) {
-          display: block;
-          float: right;
+          color: $font-color-white;
         }
       }
     }
