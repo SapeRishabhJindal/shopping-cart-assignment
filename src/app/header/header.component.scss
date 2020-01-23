@@ -70,11 +70,14 @@ header {
 
   .mobile__menu {
     list-style: none;
-    margin-left: 10px;
+    position: relative;
+    z-index: 9999;
+    background-color: white;
     li {
       padding: 2px;
       border-bottom: 1px solid $hamburger-icon-borber;
       font-size: 0.9rem;
+      margin-left: 10px;
     }
   }
 }

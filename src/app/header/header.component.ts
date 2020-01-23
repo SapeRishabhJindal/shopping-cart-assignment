@@ -44,15 +44,6 @@ export class HeaderComponent implements OnInit {
   }
   toggleMobileMenu() {
     this.showMobileMenu = !this.showMobileMenu;
-    if (this.showCart) {
-      if (this.showMobileMenu) {
-        document.querySelector('.modal-custom')['style'].top = '155px';
-        document.querySelector('.shopping-cart')['style'].height = '76.5vh';
-      } else {
-        document.querySelector('.modal-custom')['style'].top = '54px';
-        document.querySelector('.shopping-cart')['style'].height = '90vh';
-      }
-    }
   }
 
   checkScreenSize(innerWidth) {
