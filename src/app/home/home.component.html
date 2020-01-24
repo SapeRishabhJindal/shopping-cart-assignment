@@ -6,8 +6,8 @@
         <a class="slideshow__container__prev" (click)="plusSlides(-1)">prev</a>
         <a class="slideshow__container__next" (click)="plusSlides(1)">next</a>
     </div>
-    <div style="text-align:center">
-        <span class="dot" (click)="currentSlide(i+1)" *ngFor="let banner of banners;index as i"></span>
+    <div class="slideshow__dot__container">
+        <span class="slideshow__dot" (click)="currentSlide(i+1)" *ngFor="let banner of banners;index as i"></span>
     </div>
     <app-categories [categories]="categories"></app-categories>
 </section>
