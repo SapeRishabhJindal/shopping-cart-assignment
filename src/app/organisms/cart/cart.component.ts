@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, AfterViewInit, HostListener } from '@angular/core';
-import { ServiceService } from '../service.service';
+import { ServiceService } from '../../service.service';
 import { Subscription } from 'rxjs';
 
 @Component({
