@@ -33,6 +33,7 @@
   }
   &.btn-main {
     width: 65%;
+    margin-bottom: 1rem;
     @media only screen and (min-width: $medium-Screen-Size) {
       width: 50%;
       font-size: 1rem;
