@@ -18,13 +18,13 @@ export class CartComponent implements OnInit, AfterViewInit {
   keyEvent(event: KeyboardEvent) {
     if (this.cartItem.length === 0) {
       if (event.keyCode === 9) {
-        if (event.target['id'] === 'shopping-cart-btn') {
+        if (event.target['id'] === 'shoppingCart-checkout') {
           event.preventDefault();
           document.getElementById('close-cart').focus();
         }
         if (event.target['id'] === 'close-cart') {
           event.preventDefault();
-          document.getElementById('shopping-cart-btn').focus();
+          document.getElementById('shoppingCart-checkout').focus();
         }
       }
       if (event.keyCode === 13) {
@@ -34,15 +34,15 @@ export class CartComponent implements OnInit, AfterViewInit {
       if (event.keyCode === 9) {
         if (event.target['id'].substring(0, 7) === 'addItem' && Number(event.target['id'][7]) === (this.cartItem.length - 1)) {
           event.preventDefault();
-          document.getElementById('proceed-to-checkout').focus();
+          document.getElementById('shoppingCart-checkout').focus();
         }
-        if (event.target['id'] === 'proceed-to-checkout') {
+        if (event.target['id'] === 'shoppingCart-checkout') {
           event.preventDefault();
           document.getElementById('close-cart').focus();
         }
       }
       if (event.keyCode === 13) {
-        if (['close-cart', 'proceed-to-checkout'].indexOf(event.target['id']) !== -1) {
+        if (['close-cart', 'shoppingCart-checkout'].indexOf(event.target['id']) !== -1) {
           this.closeCartClicked();
         } else if (event.target['id'].substring(0, 10) === 'removeItem') {
           let index = Number(event.target['id'][10]);
@@ -74,11 +74,11 @@ export class CartComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    if (this.cartItem.length === 0) {
-      document.getElementById('shopping-cart-btn').focus();
-    } else {
-      document.getElementById('removeItem0').focus();
-    }
+    // if (this.cartItem.length === 0) {
+    //   document.getElementById('shoppingCart-checkout').focus();
+    // } else {
+    //   document.getElementById('removeItem0').focus();
+    // }
   }
 
 
@@ -95,7 +95,9 @@ export class CartComponent implements OnInit, AfterViewInit {
     if (this.cartItem[i].quantity === 1) {
       this.cartItem.splice(i, 1);
       this.service.removeItemFromCart(this.cartItem);
-      document.getElementById(`removeItem${i + 1}`).focus();
+      if (this.cartItem.length) {
+        document.getElementById(`removeItem${i + 1}`).focus();
+      }
     } else {
       this.cartItem[i].quantity--;
       this.service.removeItemFromCart(this.cartItem);

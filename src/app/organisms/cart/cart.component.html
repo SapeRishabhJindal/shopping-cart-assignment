@@ -48,14 +48,14 @@
 
         <div class="shoppingCart__checkout" *ngIf="cartItem.length > 0">
             <p>Promo code can be applied on the payment page</p>
-            <app-button classList="btn btn-cart btn-cart-checkout" tabindex="0" id="proceed-to-checkout"
+            <app-button classList="btn btn-cart btn-cart-checkout" tabindex="0" id="shoppingCart-checkout"
                 (click)="closeCartClicked()">
                 <span class="float-left">Proceed to Checkout</span>
                 <span class="float-right">Rs.{{totalPrice}}</span>
             </app-button>
         </div>
         <div class="shoppingCart__checkout" *ngIf="cartItem.length === 0">
-            <app-button classList="btn btn-cart btn-cart-startShopping" tabindex="0" id="shopping-cart-btn"
+            <app-button classList="btn btn-cart btn-cart-startShopping" tabindex="0" id="shoppingCart-checkout"
                 (click)="closeCartClicked()">
                 <span class="d-inline-block">Start Shopping</span>
             </app-button>
