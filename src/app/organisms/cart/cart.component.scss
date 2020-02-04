@@ -1,8 +1,15 @@
 @import "../../../constants.scss";
 
+.fa {
+  cursor: pointer;
+}
+app-button {
+  display: inline-block;
+}
+
 .modal-custom {
   position: fixed;
-  z-index: 999;
+  z-index: 2;
   padding-top: 100px;
   left: 0;
   top: 54px;
@@ -189,14 +196,11 @@
         }
       }
       app-button {
+        display: inline;
         span {
           padding: 5px 10px;
         }
       }
     }
   }
-}
-
-.fa {
-  cursor: pointer;
 }

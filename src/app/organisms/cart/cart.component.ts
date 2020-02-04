@@ -32,28 +32,24 @@ export class CartComponent implements OnInit, AfterViewInit {
       }
     } else {
       if (event.keyCode === 9) {
-        // if (event.target['classList'][1] === 'fa-plus' && Number(event.target['id'][7]) === (this.cartItem.length - 1)) {
-        //   event.preventDefault();
-        //   document.getElementById('proceed-to-checkout').focus();
-        // }
+        if (event.target['id'].substring(0, 7) === 'addItem' && Number(event.target['id'][7]) === (this.cartItem.length - 1)) {
+          event.preventDefault();
+          document.getElementById('proceed-to-checkout').focus();
+        }
         if (event.target['id'] === 'proceed-to-checkout') {
           event.preventDefault();
           document.getElementById('close-cart').focus();
         }
-        // if (event.target['id'] === 'close-cart') {
-        //   event.preventDefault();
-        //   document.getElementById('removeItem0').focus();
-        // }
       }
       if (event.keyCode === 13) {
         if (['close-cart', 'proceed-to-checkout'].indexOf(event.target['id']) !== -1) {
           this.closeCartClicked();
-        } else if (event.target['classList'][1] === 'fa-minus') {
+        } else if (event.target['id'].substring(0, 10) === 'removeItem') {
           let index = Number(event.target['id'][10]);
           this.substractQuantity(index);
         } else {
           let index = Number(event.target['id'][7]);
-          this.addQuantity(index);
+          this.addQuantity(this.cartItem[index]);
         }
       }
     }
