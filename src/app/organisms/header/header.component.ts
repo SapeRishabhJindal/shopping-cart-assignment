@@ -51,6 +51,7 @@ export class HeaderComponent implements OnInit {
       this.setScreenSize(true, false);
     } else {
       this.setScreenSize(false, true);
+      this.showMobileMenu = false;
     }
   }
   setScreenSize(small, mediumlarge) {

@@ -1,5 +1,5 @@
 <div class="product__content">
-    <div class="product__card" *ngFor="let product of products;index as i">
+    <article class="product__card" *ngFor="let product of products;index as i">
         <h3>{{product.name}}</h3>
         <div class="product__card__main">
             <div class="product__card__image">
@@ -20,5 +20,5 @@
             </app-button>
         </div>
         <hr size="20">
-    </div>
+    </article>
 </div>

@@ -9,13 +9,13 @@
   }
   margin: auto;
   aside {
-    width: 100%;
+    flex: 1;
     @media only screen and (min-width: $medium-Screen-Size) {
-      width: 25%;
+      flex: 2;
       background-color: $main-background;
     }
     @media only screen and (min-width: $large-Screen-Size) {
-      width: 16.66%;
+      flex: 1.5;
     }
     ul {
       li {
@@ -40,12 +40,12 @@
   }
 
   .products__container {
-    width: 100%;
+    flex: 1;
     @media only screen and (min-width: $medium-Screen-Size) {
-      width: 75%;
+      flex: 8;
     }
     @media only screen and (min-width: $large-Screen-Size) {
-      width: 83.34%;
+      flex: 8.5;
     }
   }
 }

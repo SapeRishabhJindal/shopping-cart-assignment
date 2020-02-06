@@ -28,12 +28,12 @@ header {
           }
         }
         @media only screen and (min-width: $medium-Screen-Size) {
-          width: 20%;
+          flex: 2;
         }
       }
 
       ul {
-        width: 30%;
+        flex: 3;
         display: none;
         margin-top: 15px;
         margin-bottom: 0px;
@@ -50,8 +50,7 @@ header {
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
-        width: 50%;
-        text-align: right;
+        flex: 5;
         .nav__container__cart__hamburger {
           font-size: 1.4rem;
           font-weight: 300;
