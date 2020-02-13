@@ -1,4 +1,4 @@
-<section>
+<main>
     <div class="slideshow__container">
         <div class="mySlides slideshow__container__fade" *ngFor="let banner of banners;index as i">
             <img src="{{banner.bannerImageUrl}}" alt="{{banner.bannerImageAlt}}" style="width:100%">
@@ -10,4 +10,4 @@
         <span class="slideshow__dot" (click)="currentSlide(i+1)" *ngFor="let banner of banners;index as i"></span>
     </div>
     <app-categories [categories]="categories"></app-categories>
-</section>
+</main>

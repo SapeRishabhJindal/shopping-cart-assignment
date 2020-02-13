@@ -1,10 +1,10 @@
-<article class="category" *ngFor="let item of categories;index as i">
+<figure class="category" *ngFor="let item of categories;index as i">
     <ng-template [ngIf]="i%2 === 0">
         <div class="category__image__container">
             <img src="{{item.imageUrl}}" alt="{{item.key}}">
         </div>
         <div class="category__description">
-            <h2>{{item.name}}</h2>
+            <figcaption>{{item.name}}</figcaption>
             <p>{{item.description}}</p>
             <app-button classList="btn btn-main" [routerLink]="['/products',item.id]">Explore {{item.key}}
             </app-button>
@@ -12,7 +12,7 @@
     </ng-template>
     <ng-template [ngIf]="i%2 !== 0">
         <div class="category__description">
-            <h2>{{item.name}}</h2>
+            <figcaption>{{item.name}}</figcaption>
             <p>{{item.description}}</p>
             <app-button classList="btn btn-main" [routerLink]="['/products',item.id]">Explore {{item.key}}
             </app-button>
@@ -21,4 +21,4 @@
             <img src="{{item.imageUrl}}" alt="{{item.key}}">
         </div>
     </ng-template>
-</article>
+</figure>

@@ -16,9 +16,11 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.service.getCategories().subscribe(data => {
       this.categories = data;
-      this.categories.forEach(element => {
-        element.imageUrl = '../../assets' + element.imageUrl;
-      });
+
+      this.categories = this.categories.filter(elem => {
+        elem.imageUrl = '../../assets' + elem.imageUrl;
+        return elem.enabled === true;
+      })
     });
 
     this.service.getBanners().subscribe(data => {
