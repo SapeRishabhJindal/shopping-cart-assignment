@@ -1,7 +1,10 @@
-h3 {
-  margin-top: 2rem;
-}
+@import "../../../constants.scss";
 
-form {
-  margin-bottom: 2rem;
+main {
+  padding: 30px 0;
+  max-width: 100%;
+  margin: auto;
+  @media only screen and (min-width: $large-Screen-Size) {
+    max-width: 1140px;
+  }
 }
