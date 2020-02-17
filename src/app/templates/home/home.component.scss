@@ -8,6 +8,7 @@
   max-width: 1140px;
   position: relative;
   margin: auto;
+  box-shadow: 0 8px 8px $box-shadow-color;
 
   .slideshow__container__fade {
     -webkit-animation-name: fade;
@@ -72,11 +73,13 @@
 /* The dots/bullets/indicators */
 .slideshow__dot__container {
   text-align: center;
+  position: relative;
+  top: -35px;
   .slideshow__dot {
     cursor: pointer;
     height: 6px;
     width: 6px;
-    margin: 0 2px;
+    margin: 0 8px;
     background-color: $input-color;
     border-radius: 50%;
     display: inline-block;
@@ -85,8 +88,8 @@
       background-color: $carousel-button;
     }
     @media only screen and (min-width: $medium-Screen-Size) {
-      height: 12px;
-      width: 12px;
+      height: 9px;
+      width: 9px;
     }
   }
 }

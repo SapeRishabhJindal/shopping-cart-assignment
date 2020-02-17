@@ -21,15 +21,17 @@
                 <li (click)="closeCart()"> <a [routerLink]="['/products','']" routerLinkActive="active">Products</a>
                 </li>
             </ul>
-            <div class="nav__container__cart">
-                <app-button classList="btn-grey" (click)="toggleCart()">
-                    <img src="../../assets/static/images/cart.svg" alt="cart icon" class="nav__container__cartImg"
-                        aria-hidden="true">
-                    <span>{{cartItemCount}} items</span>
-                </app-button>
-                <app-button classList="btn-transparent" (click)="toggleMobileMenu()" *ngIf="isSmallScreen">
-                    <i class="fa fa-bars nav__container__cart__hamburger"></i></app-button>
-            </div>
+            <app-button classList="btn-transparent" class="hamburger_container" (click)="toggleMobileMenu()"
+                *ngIf="isSmallScreen">
+                <i class="fa fa-bars nav__container__hamburger"></i>
+            </app-button>
+            <!-- <div class="nav__container__cart"> -->
+            <app-button classList="btn-grey" (click)="toggleCart()">
+                <img src="../../assets/static/images/cart.svg" alt="cart icon" class="nav__container__cartImg"
+                    aria-hidden="true">
+                <span>{{cartItemCount}} items</span>
+            </app-button>
+            <!-- </div> -->
         </div>
     </nav>
     <ul class="mobile__menu" (click)="toggleMobileMenu()" *ngIf="showMobileMenu">

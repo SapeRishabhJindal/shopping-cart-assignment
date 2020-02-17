@@ -2,11 +2,10 @@
 
 .btn-grey {
   background-color: $main-background;
-  padding: 13px 15px;
-  display: flex;
+  height: 100%;
+  width: 100px;
   border: 0;
   @media only screen and (min-width: $medium-Screen-Size) {
-    padding: 22px 20px;
     width: 125px;
   }
 }
