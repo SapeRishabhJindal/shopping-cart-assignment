@@ -7,9 +7,9 @@
         <div class="col-md-6">
             <form method="POST" (ngSubmit)="loginClick()">
                 <div class="input__group">
-                    <input type="text" [formControl]="email" required />
+                    <input type="text" [formControl]="email" name="email" id="email" required />
                     <span class="input__bar"></span>
-                    <label>Email*</label>
+                    <label for="email">Email*</label>
                     <div *ngIf="email.touched || submitted">
                         <div *ngIf="email.errors?.required" aria-describedby="Email is required" aria-live="assertive"
                             class="form-error">Email is required</div>
@@ -19,9 +19,9 @@
                     </div>
                 </div>
                 <div class="input__group">
-                    <input type="password" [formControl]="password" required />
+                    <input type="password" [formControl]="password" name="password" id="password" required />
                     <span class="input__bar"></span>
-                    <label>Password</label>
+                    <label for="password">Password</label>
                     <div *ngIf="password.touched || submitted">
                         <div *ngIf="password.errors?.required" aria-describedby="Password is required"
                             aria-live="assertive" class="form-error">Password is required

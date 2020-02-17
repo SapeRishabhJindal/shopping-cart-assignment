@@ -7,27 +7,27 @@
         <div class="col-md-6">
             <form method="POST" (ngSubmit)="registerClicked()">
                 <div class="input__group">
-                    <input type="text" required="required" [formControl]="firstName" />
+                    <input type="text" required="required" [formControl]="firstName" name="firstName" id="firstName" />
                     <span class="input__bar"></span>
-                    <label>First Name</label>
+                    <label for="firstName">First Name</label>
                     <div *ngIf=" firstName.touched ||submitted">
                         <div *ngIf="firstName.errors?.required" aria-describedby="First Name is required"
                             aria-live="assertive" class="form-error">First Name is required</div>
                     </div>
                 </div>
                 <div class="input__group">
-                    <input type="text" required="required" [formControl]="lastName" />
+                    <input type="text" required="required" [formControl]="lastName" name="lastName" id="lastName" />
                     <span class="input__bar"></span>
-                    <label>Last Name</label>
+                    <label for="lastName">Last Name</label>
                     <div *ngIf="lastName.touched || submitted">
                         <div *ngIf="lastName.errors?.required" aria-describedby="Last Name is required"
                             aria-live="assertive" class="form-error">Last Name is required</div>
                     </div>
                 </div>
                 <div class="input__group">
-                    <input type="text" required="required" [formControl]="email" />
+                    <input type="text" required="required" [formControl]="email" name="email" id="email" />
                     <span class="input__bar"></span>
-                    <label>Email</label>
+                    <label for="email">Email</label>
                     <div *ngIf=" email.touched || submitted">
                         <div *ngIf="email.errors?.required" aria-describedby="Email is required" aria-live="assertive"
                             class="form-error">Email is required</div>
@@ -37,9 +37,9 @@
                     </div>
                 </div>
                 <div class="input__group">
-                    <input type="password" required="required" [formControl]="password" />
+                    <input type="password" required="required" [formControl]="password" name="password" id="password" />
                     <span class="input__bar"></span>
-                    <label>Password</label>
+                    <label for="password">Password</label>
                     <div *ngIf="password.touched || submitted">
                         <div *ngIf="password.errors?.required" aria-describedby="Password is required"
                             aria-live="assertive" class="form-error">Password is required
@@ -53,9 +53,10 @@
                     </div>
                 </div>
                 <div class="input__group">
-                    <input type="password" required="required" [formControl]="confirmPassword" />
+                    <input type="password" required="required" [formControl]="confirmPassword" name="confirmPassword"
+                        id="confirmPassword" />
                     <span class="input__bar"></span>
-                    <label>Confirm Password</label>
+                    <label for="confirmPassword">Confirm Password</label>
                     <div *ngIf="confirmPassword.touched || submitted">
                         <div *ngIf="confirmPassword.errors?.required" aria-describedby="Confirm Password is required"
                             aria-live="assertive" class="form-error">
