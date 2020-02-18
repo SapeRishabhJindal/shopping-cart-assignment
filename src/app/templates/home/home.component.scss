@@ -92,6 +92,9 @@
       width: 9px;
     }
   }
+  .active {
+    background-color: $background-color-black;
+  }
 }
 
 main {
