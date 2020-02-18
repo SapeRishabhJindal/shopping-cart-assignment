@@ -2,10 +2,11 @@
     <aside>
         <ul *ngIf="!isSmallScreen">
             <ng-container *ngFor="let cat of category">
-                <li *ngIf="cat.enabled" (click)="filterProducts(cat.id)"
-                    [ngClass]="{'aside__nav--active': cat.id===selectedID}">
-                    <app-button classList="btn-transparent">
-                        {{cat.name}}</app-button>
+                <li *ngIf="cat.enabled" [ngClass]="{'aside__nav--active': cat.id===selectedID}">
+                    <a *ngIf=" cat.id!==selectedID" [routerLink]="['/products',cat.key]">
+                        {{cat.name}}</a>
+                    <a *ngIf=" cat.id===selectedID" [routerLink]="['/products']">
+                        {{cat.name}}</a>
                 </li>
             </ng-container>
         </ul>

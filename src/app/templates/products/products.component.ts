@@ -23,6 +23,9 @@ export class ProductsComponent implements OnInit {
   isMediumScreen = false;
   isLargeScreen = false;
   ngOnInit() {
+    this.service.getCategories().subscribe(data => {
+      this.category = data;
+    })
     this.service.getProducts().subscribe(data => {
       this.originalProducts = JSON.parse(JSON.stringify(data));
       this.originalProducts.forEach(element => {
@@ -36,12 +39,10 @@ export class ProductsComponent implements OnInit {
         if (params['id'] === '' || params['id'] === undefined) {
           this.products = JSON.parse(JSON.stringify(this.originalProducts));
         } else {
-          this.filterProducts(params['id']);
+          let obj = this.category.find(cat => cat.key === params['id']);
+          this.filterProducts(obj.id);
         }
       });
-    })
-    this.service.getCategories().subscribe(data => {
-      this.category = data;
     })
     this.checkScreenSize(window.innerWidth);
   }

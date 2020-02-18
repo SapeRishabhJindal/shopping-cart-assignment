@@ -27,11 +27,10 @@ h2 {
 
 a {
   text-decoration: none;
-  color: $font-color-main !important;
-}
-
-a:hover {
-  text-decoration: none !important;
+  color: $font-color-main;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .flex-container {
