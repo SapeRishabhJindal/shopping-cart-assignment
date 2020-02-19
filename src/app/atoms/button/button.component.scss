@@ -15,6 +15,27 @@
   border: transparent;
 }
 
+.btn-slideshow__dot {
+  height: 6px;
+  width: 6px;
+  margin: 0 8px;
+  background-color: $input-color;
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+  border: transparent;
+  &:hover {
+    background-color: $carousel-button;
+  }
+  @media only screen and (min-width: $medium-Screen-Size) {
+    height: 9px;
+    width: 9px;
+  }
+
+  &.active {
+    background-color: $background-color-black;
+  }
+}
+
 .btn {
   background-color: $button-main;
   padding: 5px 0;
@@ -70,23 +91,9 @@
   }
   &--white {
     color: $button-main-color;
-  }
-
-  .slideshow__dot {
-    cursor: pointer;
-    height: 6px;
-    width: 6px;
-    margin: 0 8px;
-    background-color: $input-color;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-    &:hover {
-      background-color: $carousel-button;
-    }
+    padding: 4px 8px;
     @media only screen and (min-width: $medium-Screen-Size) {
-      height: 9px;
-      width: 9px;
+      padding: 10px 15px;
     }
   }
 }

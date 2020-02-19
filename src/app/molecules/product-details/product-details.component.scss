@@ -3,6 +3,9 @@
 .productContent {
   display: flex;
   flex-wrap: wrap;
+  @media only screen and (min-width: $large-Screen-Size) {
+    padding: 10px 10px;
+  }
   &__card {
     width: 100%;
     padding: 10px;
@@ -15,8 +18,9 @@
     }
     @media only screen and (min-width: $large-Screen-Size) {
       width: 25%;
+      padding: 15px 5px;
     }
-    h3 {
+    h2 {
       font-size: 1.2rem;
       @media only screen and (min-width: $medium-Screen-Size) {
         min-height: 60px;

@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
 
   showSlides(n) {
     const slides = document.getElementsByClassName("mySlides");
-    const dots = document.getElementsByClassName("slideshow__dot");
+    const dots = document.getElementsByClassName("btn-slideshow__dot");
     if (n > slides.length) {
       this.slideIndex = 1
     }

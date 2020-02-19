@@ -18,13 +18,16 @@
       flex: 1.5;
     }
     ul {
+      list-style: none;
       li {
         font-size: 0.8rem;
-        list-style: none;
-        padding: 10px 0;
         margin-left: 10px;
         border-bottom: 1px solid $side-nav-li-border;
         cursor: pointer;
+        a {
+          display: block;
+          padding: 10px 0;
+        }
       }
       .aside__nav--active {
         border-right: 2px solid $font-color-black;

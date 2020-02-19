@@ -36,11 +36,7 @@ a {
 .flex-container {
   display: flex;
 }
-// app-button {
-//   display: block;
-// }
 
-// section,
 .input__group {
   position: relative;
   margin: 15px auto;
@@ -112,4 +108,15 @@ a {
     font-size: 0.8rem;
     color: $error;
   }
+}
+
+.visuallyhidden {
+  border: 0 none;
+  clip: rect(0px, 0px, 0px, 0px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }

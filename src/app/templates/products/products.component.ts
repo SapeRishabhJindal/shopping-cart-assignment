@@ -18,6 +18,7 @@ export class ProductsComponent implements OnInit {
   originalProducts: any;
   products: any;
   category: any;
+  categorySelected: string = 'All Products';
   selectedID = null;
   isSmallScreen = true;
   isMediumScreen = false;
@@ -38,9 +39,11 @@ export class ProductsComponent implements OnInit {
       this.route.params.subscribe(params => {
         if (params['id'] === '' || params['id'] === undefined) {
           this.products = JSON.parse(JSON.stringify(this.originalProducts));
+          this.categorySelected = 'All Products'
         } else {
           let obj = this.category.find(cat => cat.key === params['id']);
           this.filterProducts(obj.id);
+          this.categorySelected = obj.name;
         }
       });
     })
