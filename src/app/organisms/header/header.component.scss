@@ -66,10 +66,13 @@ header {
     z-index: 3;
     background-color: white;
     li {
-      padding: 2px;
+      padding: 4px 2px;
       border-bottom: 1px solid $hamburger-icon-borber;
       font-size: 0.9rem;
       margin-left: 10px;
+      &:last-child {
+        border-bottom: none;
+      }
     }
   }
 }

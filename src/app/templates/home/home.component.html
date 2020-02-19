@@ -11,7 +11,10 @@
         </app-button>
     </div>
     <div class="slideshow__dot__container">
-        <span class="slideshow__dot" (click)="currentSlide(i+1)" *ngFor="let banner of banners;index as i"></span>
+        <!-- <span class="slideshow__dot" (click)="currentSlide(i+1)" *ngFor="let banner of banners;index as i"></span> -->
+        <app-button class="slideshow__dot" classList="btn-transparent" (click)="currentSlide(i+1)"
+            *ngFor="let banner of banners;index as i">
+        </app-button>
     </div>
     <app-categories [categories]="categories"></app-categories>
 </main>

@@ -43,7 +43,11 @@ a {
 // section,
 .input__group {
   position: relative;
-  margin: 15px 0;
+  margin: 15px auto;
+  width: 90%;
+  @media only screen and (min-width: $medium-Screen-Size) {
+    margin: 15px 0;
+  }
   input {
     background: none;
     color: $font-color-black;

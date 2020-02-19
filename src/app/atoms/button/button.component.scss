@@ -45,9 +45,10 @@
     margin-bottom: 10px;
   }
   &.btn-submit {
-    width: 100%;
+    width: 90%;
+    margin-left: 5%;
     @media only screen and (min-width: $medium-Screen-Size) {
-      width: 90%;
+      margin-left: 0;
     }
     @media only screen and (min-width: $large-Screen-Size) {
       width: 60%;
@@ -69,5 +70,23 @@
   }
   &--white {
     color: $button-main-color;
+  }
+
+  .slideshow__dot {
+    cursor: pointer;
+    height: 6px;
+    width: 6px;
+    margin: 0 8px;
+    background-color: $input-color;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    &:hover {
+      background-color: $carousel-button;
+    }
+    @media only screen and (min-width: $medium-Screen-Size) {
+      height: 9px;
+      width: 9px;
+    }
   }
 }
