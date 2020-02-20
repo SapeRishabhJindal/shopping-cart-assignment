@@ -43,6 +43,7 @@ a {
   width: 90%;
   @media only screen and (min-width: $medium-Screen-Size) {
     margin: 15px 0;
+    width: 100%;
   }
   input {
     background: none;
@@ -55,7 +56,10 @@ a {
     border-radius: 0;
     border-bottom: 1px solid $input-color;
     @media only screen and (min-width: $medium-Screen-Size) {
-      width: 320px;
+      width: 75%;
+    }
+    @media only screen and (min-width: $large-Screen-Size) {
+      width: 60%;
     }
     &:focus {
       outline: none;

@@ -7,4 +7,25 @@ main {
   @media only screen and (min-width: $large-Screen-Size) {
     max-width: 1140px;
   }
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    @media only screen and (min-width: $medium-Screen-Size) {
+      flex-direction: row;
+    }
+    &__text {
+      flex: 1;
+      text-align: center;
+      p {
+        padding: 0 1rem;
+      }
+    }
+    &__form {
+      flex: 1;
+      text-align: center;
+      @media only screen and (min-width: $medium-Screen-Size) {
+        text-align: left;
+      }
+    }
+  }
 }

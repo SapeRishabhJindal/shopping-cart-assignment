@@ -1,10 +1,10 @@
-<main class="container-xl">
-    <div class="row">
-        <div class="col-md-6 text-center">
+<main>
+    <div class="form-container">
+        <div class="form-container__text">
             <h3>SignUp</h3>
             <p>We do not share your personal details with anyone</p>
         </div>
-        <div class="col-md-6">
+        <div class="form-container__form">
             <form method="POST" (ngSubmit)="registerClicked()">
                 <div class="input__group">
                     <input type="text" required="required" [formControl]="firstName" name="firstName" id="firstName" />

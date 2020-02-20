@@ -67,9 +67,8 @@
   }
   &.btn-submit {
     width: 90%;
-    margin-left: 5%;
     @media only screen and (min-width: $medium-Screen-Size) {
-      margin-left: 0;
+      width: 75%;
     }
     @media only screen and (min-width: $large-Screen-Size) {
       width: 60%;
