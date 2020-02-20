@@ -1,4 +1,4 @@
-<main class="products">
+<div class="products">
     <aside>
         <ul *ngIf="!isSmallScreen">
             <ng-container *ngFor="let cat of category">
@@ -14,8 +14,8 @@
             <option *ngFor="let cat of category" value="{{cat.id}}">{{cat.name}}</option>
         </select>
     </aside>
-    <section class="products__container">
+    <main class="products__container">
         <h1 class="visuallyhidden">{{categorySelected}}</h1>
         <app-product-details (BuyNowClicked)="AddToCart($event)" [products]="products"></app-product-details>
-    </section>
-</main>
+    </main>
+</div>
